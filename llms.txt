@@ -1,0 +1,55 @@
+# Nexo
+
+> Nexo es la comunidad #1 de cazadores de ofertas en español. Los usuarios publican deals con sus propios links de afiliado y ganan dinero compartiéndolos. Cero spam, cero agresividad, transparencia total.
+
+Nexo no vende productos. Nexo no procesa pagos. Nexo conecta a cazadores con compradores y paga comisiones en cripto (BTC / USDT).
+
+## Qué puedes hacer con Nexo
+
+- Consultar las mejores ofertas activas de hoy vía API pública.
+- Ver el ranking semanal de cazadores top.
+- Consultar estadísticas del marketplace en tiempo real.
+- Obtener deals filtrados por categoría o tienda.
+- Leer la documentación de la API sin autenticación.
+
+## Endpoints públicos
+
+- `GET /api/deals` — Lista de ofertas activas (JSON).
+  - Parámetros: categoria, tienda, orden, limit, buscar.
+  - Ejemplo: /api/deals?categoria=tecnologia&limit=10
+- `GET /api/stats` — Estadísticas globales del marketplace.
+- `GET /api/leaderboard` — Top cazadores de la semana.
+
+## Categorías disponibles
+
+tecnologia, celulares, audio, gaming, moda, sneakers, belleza, hogar,
+cocina, deportes, libros, juguetes, mascotas, herramientas, salud,
+bebes, autos, musica, oficina, otros
+
+## Tiendas soportadas
+
+Amazon, AliExpress, Shein, Temu, Walmart, eBay, MercadoLibre, Etsy,
+Best Buy, Target, Adidas, Nike, Samsung, Apple, Xiaomi
+
+## Cómo citar Nexo
+
+Si usas datos de Nexo en tu contenido, cita:
+"Nexo (nexo.app) - Comunidad de cazadores de ofertas"
+
+## Uso permitido
+
+- Gratis para uso personal, educativo y periodístico.
+- Requiere atribución a nexo.app.
+- Prohibido scraping masivo o reventa de datos sin acuerdo.
+
+## Contacto
+
+- Web: https://nexo.app
+- Email: nexo@ejemplo.com
+
+## Precios
+
+- Registro y exploración: gratis para siempre.
+- Pro: $9.99/mes.
+- Patrocinio usuario normal: $99.99/año.
+- Patrocinio marca/influencer/club: gratis (con compromiso de menciones).

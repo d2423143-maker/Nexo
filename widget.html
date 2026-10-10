@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexo Widget</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: transparent;
+    color: #0F0E1A;
+    padding: 8px;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #F5F3FF; } }
+  .widget {
+    background: #FFFFFF;
+    border: 1px solid #E5E2DB;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 420px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(15,14,26,0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    .widget { background: #1A1828; border-color: #2A2740; }
+  }
+  .widget-head {
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #4B2AE0, #6B4EE6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .widget-head a { color: #C4F000; text-decoration: none; }
+  .widget-list { padding: 8px; }
+  .widget-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: background .15s;
+  }
+  .widget-item:hover { background: #F3F1EC; }
+  @media (prefers-color-scheme: dark) { .widget-item:hover { background: #12101F; } }
+  .widget-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #F3F1EC;
+    flex-shrink: 0;
+  }
+  .widget-info { flex: 1; min-width: 0; }
+  .widget-titulo {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .widget-precio { font-size: 16px; font-weight: 800; color: #4B2AE0; }
+  .widget-footer {
+    padding: 10px 16px;
+    text-align: center;
+    font-size: 12px;
+    color: #8E8B9E;
+    border-top: 1px solid #E5E2DB;
+  }
+  @media (prefers-color-scheme: dark) { .widget-footer { border-color: #2A2740; color: #7A7690; } }
+  .widget-footer a { color: #4B2AE0; font-weight: 700; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="widget">
+  <div class="widget-head">
+    <span>🔥 Ofertas de Nexo</span>
+    <a href="https://nexo.app" target="_blank">Ver todas →</a>
+  </div>
+  <div class="widget-list" id="widget-list">
+    <div style="padding:20px; text-align:center; color:#8E8B9E; font-size:13px;">Cargando ofertas...</div>
+  </div>
+  <div class="widget-footer">
+    Datos por <a href="https://nexo.app" target="_blank">Nexo</a> · Caza ofertas, gana dinero
+  </div>
+</div>
+<script>
+(async function() {
+  const API = 'https://nexo.app/api/deals?limit=5';
+  const cont = document.getElementById('widget-list');
+
+  try {
+    const r = await fetch(API);
+    const data = await r.json();
+
+    if (!data.ok || !data.ofertas || data.ofertas.length === 0) {
+      cont.innerHTML = '<div style="padding:20px; text-align:center; color:#8E8B9E; font-size:13px;">Sin ofertas ahora.</div>';
+      return;
+    }
+
+    cont.innerHTML = data.ofertas.map(o => {
+      const img = o.imagen_url || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><rect fill="%23EDE9FF" width="60" height="60"/><text x="50%" y="50%" text-anchor="middle" dy=".35em" fill="%234B2AE0" font-size="24">🛍️</text></svg>';
+      const precio = (o.moneda === 'USD' ? '$' : o.moneda + ' ') + Number(o.precio).toFixed(2);
+      return `
+        <a class="widget-item" href="${o.link_afiliado}" target="_blank" rel="noopener noreferrer nofollow sponsored">
+          <img class="widget-img" src="${img}" alt="" loading="lazy">
+          <div class="widget-info">
+            <div class="widget-titulo">${o.titulo}</div>
+            <div class="widget-precio">${precio}</div>
+          </div>
+        </a>
+      `;
+    }).join('');
+  } catch (e) {
+    cont.innerHTML = '<div style="padding:20px; text-align:center; color:#8E8B9E; font-size:13px;">Error al cargar.</div>';
+  }
+})();
+</script>
+</body>
+</html>

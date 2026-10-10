@@ -1,0 +1,3164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#4B2AE0">
+<meta name="description" content="Nexo · Caza ofertas reales, compártelas y cobra en cripto. La comunidad #1 de cazadores de deals en español.">
+<meta name="robots" content="index, follow">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NEXO · Caza. Comparte. Cobra.">
+<meta property="og:description" content="La comunidad de cazadores de ofertas. Gana dinero compartiendo deals reales.">
+<meta property="og:site_name" content="Nexo">
+<meta name="twitter:card" content="summary_large_image">
+<title>NEXO · Caza ofertas. Cobra en cripto.</title>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Nexo",
+  "url": "https://nexo.app",
+  "description": "Comunidad de cazadores de ofertas. Caza, comparte y cobra en cripto.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://nexo.app/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<style>
+/* ============================================================
+   NEXO · v3 · MARKETPLACE MODERNO
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #FBFAF7;
+  --bg-2: #F3F1EC;
+  --bg-3: #FFFFFF;
+  --bg-elev: #FFFFFF;
+  --tx: #0F0E1A;
+  --tx-2: #55526B;
+  --tx-3: #8E8B9E;
+  --primary: #4B2AE0;
+  --primary-2: #6B4EE6;
+  --primary-soft: #EDE9FF;
+  --accent: #C4F000;
+  --accent-2: #A8D400;
+  --pink: #FF3D8B;
+  --orange: #FF7A2F;
+  --green: #16A34A;
+  --green-soft: #DCFCE7;
+  --red: #DC2626;
+  --red-soft: #FEE2E2;
+  --gold: #F5B800;
+  --bd: #E5E2DB;
+  --bd-2: #D4D0C6;
+  --shadow-xs: 0 1px 2px rgba(15,14,26,0.05);
+  --shadow-sm: 0 2px 6px rgba(15,14,26,0.06);
+  --shadow-md: 0 6px 20px rgba(15,14,26,0.08);
+  --shadow-lg: 0 14px 40px rgba(15,14,26,0.12);
+  --shadow-glow: 0 0 0 4px rgba(75,42,224,0.12);
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --r-full: 999px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0A0914;
+    --bg-2: #12101F;
+    --bg-3: #1A1828;
+    --bg-elev: #1F1C30;
+    --tx: #F5F3FF;
+    --tx-2: #B8B4D0;
+    --tx-3: #7A7690;
+    --bd: #2A2740;
+    --bd-2: #353150;
+    --primary-soft: #1F1B3D;
+    --shadow-xs: 0 1px 2px rgba(0,0,0,0.4);
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.4);
+    --shadow-md: 0 6px 20px rgba(0,0,0,0.5);
+    --shadow-lg: 0 14px 40px rgba(0,0,0,0.6);
+  }
+}
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--tx);
+  background: var(--bg);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: var(--tx); }
+h1 { font-size: clamp(34px, 6.5vw, 60px); }
+h2 { font-size: clamp(24px, 4vw, 38px); }
+h3 { font-size: clamp(18px, 2.5vw, 24px); }
+p { color: var(--tx-2); max-width: 65ch; }
+a { color: var(--primary); text-decoration: none; transition: color .15s; }
+a:hover { color: var(--primary-2); }
+.mono { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace; font-variant-numeric: tabular-nums; }
+.texto-mono { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace; }
+.texto-centro { text-align: center; }
+.oculto { display: none !important; }
+img { max-width: 100%; height: auto; display: block; }
+button { font: inherit; color: inherit; cursor: pointer; border: none; background: none; }
+input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+.skip-link { position: absolute; top: -100px; left: 0; background: var(--primary); color: #fff; padding: 10px 16px; border-radius: var(--r-sm); z-index: 9999; }
+.skip-link:focus { top: 8px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+/* Topbar */
+.topbar {
+  background: linear-gradient(135deg, #4B2AE0 0%, #6B4EE6 60%, #8B5CF6 100%);
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.topbar strong { color: var(--accent); }
+.topbar-dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: pulse 1.6s infinite;
+  vertical-align: middle;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+/* Header */
+.header {
+  border-bottom: 1px solid var(--bd);
+  position: sticky;
+  top: env(safe-area-inset-top);
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(251,250,247,0.85);
+}
+@media (prefers-color-scheme: dark) {
+  .header { background: rgba(10,9,20,0.85); }
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--tx);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.logo:hover { color: var(--primary); }
+.logo-mark {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--primary), var(--pink));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(75,42,224,0.3);
+}
+.nav-desktop { display: flex; gap: 4px; align-items: center; }
+.nav-desktop a {
+  padding: 8px 14px;
+  border-radius: var(--r-full);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tx-2);
+  transition: all .15s;
+  cursor: pointer;
+}
+.nav-desktop a:hover { background: var(--bg-2); color: var(--tx); }
+@media (max-width: 768px) { .nav-desktop { display: none; } }
+.header-actions { display: flex; gap: 8px; align-items: center; }
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: var(--r-full);
+  background: var(--bg-3);
+  color: var(--tx);
+  border: 1px solid var(--bd);
+  cursor: pointer;
+  transition: all .15s ease;
+  text-decoration: none;
+  min-height: 42px;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.btn:active { transform: translateY(0); }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.btn-primario { background: var(--tx); color: var(--bg); border-color: var(--tx); }
+.btn-primario:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+.btn-violeta { background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: 0 4px 14px rgba(75,42,224,0.3); }
+.btn-violeta:hover { background: var(--primary-2); }
+.btn-lima { background: var(--accent); color: var(--tx); border-color: var(--accent); font-weight: 800; }
+.btn-lima:hover { background: var(--accent-2); }
+.btn-outline { background: transparent; border-color: var(--bd-2); }
+.btn-outline:hover { background: var(--bg-2); }
+.btn-grande { padding: 14px 28px; font-size: 15px; min-height: 50px; }
+.btn-bloque { width: 100%; display: flex; }
+.btn-icono { padding: 10px; min-width: 42px; min-height: 42px; font-size: 16px; }
+.btn-rojo { background: var(--red); color: #fff; border-color: var(--red); }
+.btn-verde { background: var(--green); color: #fff; border-color: var(--green); }
+/* Hero */
+.hero { padding: 48px 16px 40px; position: relative; overflow: hidden; }
+.hero::before {
+  content: "";
+  position: absolute; top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(196,240,0,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: "";
+  position: absolute; bottom: -300px; left: -200px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(75,42,224,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-radius: var(--r-full);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.hero h1 { margin-bottom: 20px; max-width: 16ch; }
+.hero h1 span {
+  background: linear-gradient(120deg, var(--primary) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-sub {
+  font-size: clamp(16px, 2vw, 19px);
+  color: var(--tx-2);
+  max-width: 55ch;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.hero-acciones { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  max-width: 720px;
+}
+.stat {
+  background: var(--bg-3);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-md);
+  padding: 16px;
+  transition: all .2s;
+}
+.stat:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tx-3);
+  margin-bottom: 6px;
+}
+.stat-num {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--tx);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.stat-num.violeta { color: var(--primary); }
+.stat-num.lima { color: var(--accent-2); }
+.stat-num.verde { color: var(--green); }
+.stat-num.gold { color: var(--gold); }
+/* Secciones */
+.seccion { max-width: 1200px; margin: 0 auto; padding: 40px 16px; }
+.seccion-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.seccion-head h2 { flex: 1; min-width: 0; }
+.seccion-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-radius: var(--r-full);
+  font-size: 12px;
+  font-weight: 700;
+}
+.seccion-desc { color: var(--tx-2); margin-bottom: 24px; max-width: 65ch; }
+/* Filtros */
+.filtros {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding: 12px;
+  background: var(--bg-3);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-lg);
+}
+.filtros label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 140px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tx-3);
+}
+.filtros select, .filtros input {
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-sm);
+  font-size: 14px;
+  color: var(--tx);
+  min-height: 40px;
+  width: 100%;
+}
+.filtros select:focus, .filtros input:focus { outline: none; border-color: var(--primary); box-shadow: var(--shadow-glow); }
+/* Grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+/* Card oferta */
+.card {
+  background: var(--bg-3);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  transition: all .2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--bd-2); }
+.card-img-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: var(--bg-2);
+  overflow: hidden;
+}
+.card-imagen {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+.card:hover .card-imagen { transform: scale(1.05); }
+.card-badges-top {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: var(--r-full);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.card-badge-patrocinado { background: var(--gold); color: #3A2A00; }
+.card-badge-flash { background: var(--pink); color: #fff; animation: pulse 1.5s infinite; }
+.card-badge-verificada { background: var(--green); color: #fff; }
+.card-badge-categoria { background: rgba(255,255,255,0.92); color: var(--tx); }
+@media (prefers-color-scheme: dark) { .card-badge-categoria { background: rgba(26,24,40,0.92); color: var(--tx); } }
+.card-fav {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all .15s;
+  color: var(--tx-3);
+}
+.card-fav:hover { transform: scale(1.1); }
+.card-fav.activo { color: var(--red); background: #fff; }
+.card-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.card-titulo {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--tx);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-desc {
+  font-size: 13px;
+  color: var(--tx-2);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-precio-wrap { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.card-precio {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--tx);
+  font-variant-numeric: tabular-nums;
+}
+.card-precio-antes {
+  font-size: 14px;
+  color: var(--tx-3);
+  text-decoration: line-through;
+}
+.card-descuento {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--green);
+  background: var(--green-soft);
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+}
+@media (prefers-color-scheme: dark) { .card-descuento { background: rgba(22,163,74,0.15); } }
+.card-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--tx-3);
+  padding-top: 8px;
+  border-top: 1px solid var(--bd);
+  flex-wrap: wrap;
+}
+.card-meta span { display: inline-flex; align-items: center; gap: 4px; }
+.card-acciones { display: flex; gap: 8px; padding: 12px 16px 16px; }
+.card-acciones .btn { flex: 1; }
+/* Skeleton */
+.skeleton {
+  background: var(--bg-3);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.skeleton-img {
+  aspect-ratio: 4/3;
+  background: linear-gradient(90deg, var(--bg-2) 25%, var(--bg-3) 50%, var(--bg-2) 75%);
+  background-size: 200% 100%;
+  animation: sk 1.4s infinite;
+}
+.skeleton-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.skeleton-line {
+  height: 14px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--bg-2) 25%, var(--bg-3) 50%, var(--bg-2) 75%);
+  background-size: 200% 100%;
+  animation: sk 1.4s infinite;
+}
+.skeleton-line.titulo { height: 18px; width: 85%; }
+.skeleton-line.corta { width: 55%; }
+@keyframes sk { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+/* Modal */
+.modal-fondo {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,9,20,0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+  overflow-y: auto;
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal-caja {
+  background: var(--bg-3);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-lg);
+  max-width: 520px;
+  width: 100%;
+  padding: 28px 24px 24px;
+  position: relative;
+  max-height: 92vh;
+  overflow-y: auto;
+  animation: slideUp 0.25s ease;
+}
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.modal-titulo {
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  padding-right: 44px;
+  color: var(--tx);
+}
+.modal-cerrar {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-2);
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .15s;
+  color: var(--tx-2);
+}
+.modal-cerrar:hover { background: var(--red-soft); color: var(--red); }
+/* Formularios */
+.campo { margin-bottom: 16px; }
+.campo label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--tx);
+}
+.campo input, .campo select, .campo textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-sm);
+  font-size: 15px;
+  color: var(--tx);
+  min-height: 48px;
+  transition: all .15s;
+}
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: var(--shadow-glow);
+  background: var(--bg-3);
+}
+.campo textarea { min-height: 100px; resize: vertical; }
+.campo-ayuda {
+  font-size: 12px;
+  color: var(--tx-3);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+.campo-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--tx-2);
+  line-height: 1.5;
+}
+.campo-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  min-height: auto;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--primary);
+}
+/* Avisos */
+.aviso {
+  border-radius: var(--r-md);
+  padding: 12px 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 16px 0;
+  border: 1px solid;
+}
+.aviso-info { background: var(--primary-soft); color: var(--primary); border-color: transparent; }
+.aviso-ok { background: var(--green-soft); color: #14532D; border-color: transparent; }
+.aviso-error { background: var(--red-soft); color: #7F1D1D; border-color: transparent; }
+.aviso-warn { background: #FEF3C7; color: #78350F; border-color: transparent; }
+@media (prefers-color-scheme: dark) {
+  .aviso-ok { background: rgba(22,163,74,0.15); color: #86EFAC; }
+  .aviso-error { background: rgba(220,38,38,0.15); color: #FCA5A5; }
+  .aviso-warn { background: rgba(245,184,0,0.15); color: #FCD34D; }
+}
+/* Toast */
+#toast-raiz {
+  position: fixed;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  left: 16px;
+  right: 16px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  pointer-events: none;
+}
+.toast {
+  max-width: 480px;
+  padding: 12px 20px;
+  border-radius: var(--r-full);
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.3s ease;
+}
+.toast-info { background: var(--tx); color: var(--bg); }
+.toast-ok { background: var(--green); color: #fff; }
+.toast-error { background: var(--red); color: #fff; }
+.toast-aviso { background: var(--gold); color: #3A2A00; }
+/* Leaderboard */
+.leader { background: var(--bg-3); border: 1px solid var(--bd); border-radius: var(--r-lg); overflow: hidden; }
+.leader-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--bd);
+  transition: background .15s;
+}
+.leader-item:hover { background: var(--bg-2); }
+.leader-item:last-child { border-bottom: none; }
+.leader-pos {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--tx-2);
+  flex-shrink: 0;
+}
+.leader-item:nth-child(1) .leader-pos { background: linear-gradient(135deg, #FFD700, #FFA500); color: #fff; }
+.leader-item:nth-child(2) .leader-pos { background: linear-gradient(135deg, #C0C0C0, #909090); color: #fff; }
+.leader-item:nth-child(3) .leader-pos { background: linear-gradient(135deg, #CD7F32, #8B5A2B); color: #fff; }
+.leader-info { flex: 1; min-width: 0; }
+.leader-nombre { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.leader-meta { font-size: 12px; color: var(--tx-3); margin-top: 2px; }
+.leader-valor { font-size: 16px; font-weight: 800; color: var(--primary); font-variant-numeric: tabular-nums; }
+/* Planes */
+.planes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.plan {
+  background: var(--bg-3);
+  border: 2px solid var(--bd);
+  border-radius: var(--r-xl);
+  padding: 28px 24px;
+  position: relative;
+  transition: all .2s;
+  display: flex;
+  flex-direction: column;
+}
+.plan:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.plan.destacado {
+  border-color: var(--primary);
+  background: linear-gradient(180deg, var(--primary-soft) 0%, var(--bg-3) 40%);
+  box-shadow: 0 8px 30px rgba(75,42,224,0.15);
+}
+.plan-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--tx);
+  padding: 5px 14px;
+  border-radius: var(--r-full);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.plan-tipo { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); margin-bottom: 8px; }
+.plan-titulo { font-size: 22px; font-weight: 900; margin-bottom: 8px; color: var(--tx); }
+.plan-desc { font-size: 14px; color: var(--tx-2); margin-bottom: 20px; line-height: 1.5; }
+.plan-precio { display: flex; align-items: baseline; gap: 6px; margin-bottom: 20px; }
+.plan-precio-num { font-size: 38px; font-weight: 900; letter-spacing: -0.03em; color: var(--tx); }
+.plan-precio-periodo { font-size: 14px; color: var(--tx-3); font-weight: 600; }
+.plan-features { list-style: none; margin-bottom: 24px; flex: 1; }
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--tx-2);
+  padding: 6px 0;
+  line-height: 1.4;
+}
+.plan-features li::before {
+  content: "✓";
+  color: var(--green);
+  font-weight: 900;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  background: var(--green-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  margin-top: 2px;
+}
+/* Footer */
+.footer {
+  border-top: 1px solid var(--bd);
+  padding: 40px 16px 24px;
+  background: var(--bg-2);
+  margin-top: 60px;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px;
+}
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+  color: var(--tx);
+}
+.footer-col a, .footer-col p {
+  display: block;
+  color: var(--tx-2);
+  font-size: 14px;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color .15s;
+}
+.footer-col a:hover { color: var(--primary); }
+.footer-legal {
+  max-width: 1200px;
+  margin: 32px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--bd);
+  font-size: 13px;
+  color: var(--tx-3);
+  text-align: center;
+  line-height: 1.7;
+}
+/* Utilidades */
+.flex { display: flex; }
+.gap-8 { gap: 8px; }
+.gap-12 { gap: 12px; }
+.gap-16 { gap: 16px; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.cargando { display: flex; align-items: center; justify-content: center; padding: 48px 16px; color: var(--tx-3); font-size: 14px; }
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span><span class="topbar-dot"></span><strong id="topbar-live">En vivo:</strong> <span id="topbar-deals">—</span> ofertas activas hoy</span>
+    <span id="topbar-nuevos">—</span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo" data-accion="ir-inicio">
+      <span class="logo-mark">N</span>
+      <span>Nexo</span>
+    </a>
+    <nav class="nav-desktop">
+      <a data-accion="ir-explorar">Explorar</a>
+      <a data-accion="ir-leaderboard">Leaderboard</a>
+      <a data-accion="ir-como">Cómo funciona</a>
+      <a data-accion="ir-patrocinio">Patrocinio</a>
+      <a data-accion="ir-api">API</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-outline" id="header-buscar" aria-label="Buscar">🔍</button>
+      <button class="btn btn-outline" data-accion="abrir-carrito" id="header-carrito" aria-label="Carrito">🛒</button>
+      <button class="btn btn-violeta" id="header-auth" data-accion="abrir-login">Entrar</button>
+      <button class="btn btn-primario oculto" id="header-perfil" data-accion="abrir-perfil">Mi perfil</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="topbar-dot"></span>
+      Comunidad #1 de cazadores en español
+    </div>
+    <h1>Caza ofertas.<br>Comparte.<br><span>Cobra en cripto.</span></h1>
+    <p class="hero-sub">
+      Nexo es la red donde miles de personas encuentran deals reales cada día
+      y ganan dinero compartiéndolos. Tú también puedes empezar hoy.
+    </p>
+    <div class="hero-acciones">
+      <button class="btn btn-violeta btn-grande" data-accion="abrir-registro">Empezar gratis →</button>
+      <button class="btn btn-outline btn-grande" data-accion="ir-explorar">Explorar ofertas</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-label">Ofertas activas</div>
+        <div class="stat-num violeta" id="stat-ofertas">—</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Cazadores</div>
+        <div class="stat-num" id="stat-usuarios">—</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Comisiones pagadas</div>
+        <div class="stat-num verde" id="stat-comisiones">—</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">En premios</div>
+        <div class="stat-num gold" id="stat-premios">—</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPLORAR ============ -->
+<section class="seccion" id="explorar">
+  <div class="seccion-head">
+    <h2>Ofertas publicadas</h2>
+    <span class="seccion-badge">Actualizado en vivo</span>
+  </div>
+  <p class="seccion-desc">
+    Filtra, vota, guarda. Cada oferta lleva su link original.
+    Tú compras en la tienda, la tienda paga al cazador.
+  </p>
+
+  <div class="filtros">
+    <label>
+      Buscar
+      <input type="text" id="filtro-buscar" placeholder="Ej: auriculares, nike...">
+    </label>
+    <label>
+      Categoría
+      <select id="filtro-categoria"><option value="">Todas</option></select>
+    </label>
+    <label>
+      Tienda
+      <select id="filtro-tienda"><option value="">Todas</option></select>
+    </label>
+    <label>
+      Orden
+      <select id="filtro-orden">
+        <option value="recientes">Más recientes</option>
+        <option value="votos">Más votadas</option>
+        <option value="precio-asc">Precio ↑</option>
+        <option value="precio-desc">Precio ↓</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="grid" id="grid-ofertas"></div>
+</section>
+
+<!-- ============ LEADERBOARD ============ -->
+<section class="seccion" id="leaderboard">
+  <div class="seccion-head">
+    <h2>Top cazadores</h2>
+    <span class="seccion-badge">Se actualiza cada hora</span>
+  </div>
+  <p class="seccion-desc">
+    Los que más venden esta semana. Ganan estatus, premios y visibilidad.
+  </p>
+  <div class="leader" id="leaderboard-lista"></div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA ============ -->
+<section class="seccion" id="como">
+  <div class="seccion-head">
+    <h2>Cómo funciona</h2>
+  </div>
+  <p class="seccion-desc">Tres pasos. Sin misterio.</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-body">
+        <div class="plan-tipo">Paso 01</div>
+        <h3 class="card-titulo">Trae tu link</h3>
+        <p class="card-desc">
+          Regístrate gratis en Amazon, AliExpress, Shein, Temu o cualquier
+          tienda con programa de afiliados. Copia tu link personal.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="plan-tipo">Paso 02</div>
+        <h3 class="card-titulo">Publica la oferta</h3>
+        <p class="card-desc">
+          Pega el link en Nexo. Añade título, precio, categoría e imagen.
+          Tu oferta aparece en el feed público al instante.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="plan-tipo">Paso 03</div>
+        <h3 class="card-titulo">Cobra en cripto</h3>
+        <p class="card-desc">
+          Cuando alguien compra desde tu oferta, la tienda te paga a ti.
+          Tú te llevas el 80%. Retiras en BTC o USDT cuando quieras.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PATROCINIO ============ -->
+<section class="seccion" id="patrocinio">
+  <div class="seccion-head">
+    <h2>Patrocinio</h2>
+    <span class="seccion-badge">Para marcas y creadores</span>
+  </div>
+  <p class="seccion-desc">
+    Dos vías. Una sola regla: si patrocinas, representas a Nexo.
+  </p>
+
+  <div class="planes">
+    <div class="plan">
+      <div class="plan-tipo">Vía 01</div>
+      <h3 class="plan-titulo">Marcas · Influencers · Clubes</h3>
+      <p class="plan-desc">
+        Si tienes una marca, eres influencer o representas un club,
+        el patrocinio es <strong>gratis</strong>. Verificamos tu perfil y activamos.
+      </p>
+      <div class="plan-precio">
+        <span class="plan-precio-num">Gratis</span>
+      </div>
+      <ul class="plan-features">
+        <li>Badge dorado en todas tus ofertas</li>
+        <li>Prioridad en el feed y leaderboard</li>
+        <li>Banner en portada</li>
+        <li>Mención en nuestras redes</li>
+        <li>Compromiso: representar a Nexo</li>
+      </ul>
+      <button class="btn btn-violeta btn-bloque" data-accion="abrir-patrocinio" data-tipo="marca">
+        Solicitar patrocinio →
+      </button>
+    </div>
+
+    <div class="plan destacado">
+      <div class="plan-badge">Popular</div>
+      <div class="plan-tipo">Vía 02</div>
+      <h3 class="plan-titulo">Usuario Normal</h3>
+      <p class="plan-desc">
+        ¿No eres marca, influencer ni club? Puedes patrocinar tus ofertas
+        por <strong>$99.99/año</strong> y salir arriba en todo.
+      </p>
+      <div class="plan-precio">
+        <span class="plan-precio-num">$99.99</span>
+        <span class="plan-precio-periodo">/ año</span>
+      </div>
+      <ul class="plan-features">
+        <li>Badge dorado en tus ofertas</li>
+        <li>Posición tope en el feed</li>
+        <li>Prioridad en moderación</li>
+        <li>Menos comisión: 15% en vez de 20%</li>
+        <li>Compromiso: representar a Nexo</li>
+      </ul>
+      <button class="btn btn-lima btn-bloque" data-accion="abrir-patrocinio" data-tipo="normal">
+        Patrocinar por $99.99/año →
+      </button>
+    </div>
+
+    <div class="plan">
+      <div class="plan-tipo">Vía 03</div>
+      <h3 class="plan-titulo">Pro (Mensual)</h3>
+      <p class="plan-desc">
+        Para cazadores activos que quieren más alcance sin compromiso anual.
+      </p>
+      <div class="plan-precio">
+        <span class="plan-precio-num">$9.99</span>
+        <span class="plan-precio-periodo">/ mes</span>
+      </div>
+      <ul class="plan-features">
+        <li>Sin límite de publicaciones</li>
+        <li>Analytics avanzadas</li>
+        <li>Badge Pro</li>
+        <li>Comisión reducida: 15%</li>
+        <li>Cancela cuando quieras</li>
+      </ul>
+      <button class="btn btn-outline btn-bloque" data-accion="abrir-pro">
+        Activar Pro →
+      </button>
+    </div>
+  </div>
+
+  <div class="aviso aviso-info mt-24">
+    <strong>Qué obtienes al patrocinar:</strong> badge dorado, posición tope
+    en el feed y leaderboard, mención en la portada, y prioridad en moderación.
+  </div>
+</section>
+
+<!-- ============ API ============ -->
+<section class="seccion" id="api">
+  <div class="seccion-head">
+    <h2>API pública</h2>
+    <span class="seccion-badge">Gratis para devs</span>
+  </div>
+  <p class="seccion-desc">
+    Accede a las ofertas de Nexo desde tu web, app o bot.
+    Sin fricción, sin tarjeta, con atribución.
+  </p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-body">
+        <div class="plan-tipo">Endpoint</div>
+        <h3 class="card-titulo">GET /api/deals</h3>
+        <p class="card-desc">
+          Lista de ofertas activas en JSON. Filtra por categoría, tienda,
+          orden y límite.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="plan-tipo">Endpoint</div>
+        <h3 class="card-titulo">GET /api/stats</h3>
+        <p class="card-desc">
+          Estadísticas públicas: ofertas activas, cazadores, comisiones pagadas.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="plan-tipo">Endpoint</div>
+        <h3 class="card-titulo">GET /api/leaderboard</h3>
+        <p class="card-desc">
+          Top cazadores de la semana. Ideal para medios y blogs.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="aviso aviso-info mt-24">
+    Documentación completa disponible en <a href="/llms.txt" target="_blank">/llms.txt</a>
+    para humanos e IAs.
+  </div>
+</section>
+
+<!-- ============ LEGAL (oculto, se abre en modal) ============ -->
+<div id="legales" class="oculto">
+  <article id="legal-terminos">
+    <p><strong>Última actualización:</strong> Octubre 2026.</p>
+    <p>Nexo es una red de cazadores de ofertas. Los usuarios publican links
+    de afiliados propios. No vendemos productos. No procesamos pagos.
+    No somos la tienda.</p>
+    <h3>1. Qué es Nexo</h3>
+    <p>Nexo permite a usuarios registrados publicar ofertas con su propio
+    link de afiliado. Cuando alguien compra desde Nexo en la tienda original,
+    la tienda paga una comisión al cazador. Nexo retiene un porcentaje.</p>
+    <h3>2. Requisitos</h3>
+    <p>Email válido, al menos 13 años. Menores de 18 requieren tutor aprobado.</p>
+    <h3>3. Responsabilidad</h3>
+    <p>El usuario responde por el contenido y la veracidad de los links.
+    Prohibido: contenido ilegal, spam, links maliciosos, falsificaciones.</p>
+    <h3>4. Comisiones</h3>
+    <p>Nexo retiene 20% (15% con Pro o patrocinio). Pagos en BTC o USDT.</p>
+    <h3>5. Suspensión</h3>
+    <p>Cuentas que violen estos términos se suspenden sin previo aviso.</p>
+  </article>
+  <article id="legal-privacidad">
+    <h2>Política de Privacidad</h2>
+    <p><strong>Cumplimiento:</strong> GDPR, COPPA, CCPA, LGPD.</p>
+    <h3>1. Qué datos guardamos</h3>
+    <p>Solo email y alias. Nada más.</p>
+    <h3>2. Para qué los usamos</h3>
+    <p>Identificarte y operar tu cuenta.</p>
+    <h3>3. Con quién compartimos</h3>
+    <p>Con nadie. Tus datos viven en Supabase.</p>
+    <h3>4. Tus derechos</h3>
+    <p>Acceso, rectificación, eliminación y portabilidad en 30 días.</p>
+  </article>
+  <article id="legal-cookies">
+    <h2>Política de Cookies</h2>
+    <p>Nexo usa una sola cookie técnica: el token de sesión en localStorage.
+    Sin tracking, sin publicidad, sin terceros.</p>
+  </article>
+  <article id="legal-aviso">
+    <h2>Aviso Legal</h2>
+    <p>Nexo es un marketplace editorial. No vendemos productos ni procesamos pagos.</p>
+  </article>
+  <article id="legal-menores">
+    <h2>Política de Menores</h2>
+    <p>Edad mínima: 13 años. Menores de 18 requieren tutor aprobado.</p>
+  </article>
+  <article id="legal-contenido">
+    <h2>Política de Contenido</h2>
+    <p>Permitido: ofertas legales con link propio. Prohibido: contenido ilegal,
+    spam, links maliciosos, falsificaciones.</p>
+  </article>
+  <article id="legal-comisiones">
+    <h2>Política de Comisiones</h2>
+    <p>Nexo retiene 20% de la comisión (15% con Pro o patrocinio).</p>
+  </article>
+  <article id="legal-pagos">
+    <h2>Política de Pagos</h2>
+    <p>Métodos: BTC, USDT TRC-20, USDT Polygon. Las comisiones de red las
+    paga quien envía. Verifica la dirección antes de enviar.</p>
+  </article>
+  <article id="legal-conflictos">
+    <h2>Resolución de Conflictos</h2>
+    <p>Escríbenos a nexo@ejemplo.com. Respondemos en 72h.</p>
+  </article>
+</div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Nexo</h4>
+      <a data-accion="ir-explorar">Explorar</a>
+      <a data-accion="ir-leaderboard">Leaderboard</a>
+      <a data-accion="ir-como">Cómo funciona</a>
+      <a data-accion="ir-api">API</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a data-accion="abrir-legal" data-legal="terminos">Términos</a>
+      <a data-accion="abrir-legal" data-legal="privacidad">Privacidad</a>
+      <a data-accion="abrir-legal" data-legal="cookies">Cookies</a>
+      <a data-accion="abrir-legal" data-legal="aviso">Aviso legal</a>
+    </div>
+    <div class="footer-col">
+      <h4>Comunidad</h4>
+      <a data-accion="abrir-legal" data-legal="comisiones">Comisiones</a>
+      <a data-accion="abrir-legal" data-legal="menores">Menores</a>
+      <a data-accion="abrir-legal" data-legal="contenido">Contenido</a>
+      <a data-accion="abrir-legal" data-legal="conflictos">Conflictos</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="mailto:nexo@ejemplo.com">nexo@ejemplo.com</a>
+      <p>Operado en Cuba · Hecho con orgullo</p>
+    </div>
+  </div>
+  <div class="footer-legal">
+    © 2026 Nexo · Todos los derechos reservados.<br>
+    Caza. Comparte. Cobra. Sin letra chica.
+  </div>
+</footer>
+
+<div id="modal-raiz" aria-live="polite"></div>
+<div id="toast-raiz"></div>
+
+<!-- El script va justo aquí abajo, en el MENSAJE C -->
+<script>
+/* ============================================================
+   NEXO · JS v3.0
+   Configuración, auth, ofertas, carrito, NXC, admin.
+   JavaScript puro. Sin dependencias. Sin errores.
+   ============================================================ */
+
+/* ============ 1. CONFIGURACIÓN ============ */
+const SUPABASE_URL = 'https://brlpajcnvfsxkdozsfkl.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_Vd_HqlZeCgIfJarwr4SzEw_IyjHL2x-';
+const TIMEOUT_MS = 12000;
+const COSTE_PUBLICAR_NXC = 50;
+const BONUS_BASE = 10;
+const PRECIO_PATROCINIO_ANUAL = 99.99;
+const PRECIO_PRO_MENSUAL = 9.99;
+
+const TIPOS_PATROCINIO = {
+  marca:  { gratis: true,  etiqueta: 'Marca / Influencer / Club' },
+  normal: { gratis: false, etiqueta: 'Usuario normal', precio: PRECIO_PATROCINIO_ANUAL }
+};
+
+/* ============ 2. ESTADO GLOBAL ============ */
+let USUARIO_ACTUAL = null;
+let CATEGORIAS = [];
+let TIENDAS = [];
+let CARRITO = [];
+let ULTIMO_FILTRO = { buscar: '', categoria: '', tienda: '', orden: 'recientes' };
+let DEBOUNCE_BUSCAR = null;
+
+/* ============ 3. HTTP CON TIMEOUT ============ */
+async function http(url, opciones = {}) {
+  const controlador = new AbortController();
+  const timeoutId = setTimeout(() => controlador.abort(), TIMEOUT_MS);
+  const headers = {
+    'apikey': SUPABASE_KEY,
+    'Authorization': 'Bearer ' + (leerToken() || SUPABASE_KEY),
+    ...(opciones.headers || {})
+  };
+  if (opciones.body !== undefined && opciones.body !== null) {
+    headers['Content-Type'] = 'application/json';
+  }
+  try {
+    const respuesta = await fetch(url, {
+      ...opciones,
+      signal: controlador.signal,
+      headers: headers
+    });
+    clearTimeout(timeoutId);
+    let data = null;
+    const texto = await respuesta.text();
+    try { data = texto ? JSON.parse(texto) : null; } catch (e) { data = texto; }
+    return {
+      ok: respuesta.ok,
+      status: respuesta.status,
+      data: data,
+      error: respuesta.ok ? null : (data && data.message) || (data && data.error) || 'Error ' + respuesta.status
+    };
+  } catch (err) {
+    clearTimeout(timeoutId);
+    if (err.name === 'AbortError') {
+      return { ok: false, status: 0, data: null, error: 'Tiempo de espera agotado. Revisa tu conexión.' };
+    }
+    return { ok: false, status: 0, data: null, error: 'Error de red: ' + err.message };
+  }
+}
+
+/* ============ 4. HELPERS DOM ============ */
+function qs(sel, raiz = document) { return raiz.querySelector(sel); }
+function qsa(sel, raiz = document) { return Array.from(raiz.querySelectorAll(sel)); }
+
+function crearEl(tag, atributos = {}, hijos = []) {
+  const el = document.createElement(tag);
+  for (const key in atributos) {
+    if (key === 'texto') el.textContent = atributos[key];
+    else if (key === 'clase') el.className = atributos[key];
+    else if (key === 'html') el.innerHTML = atributos[key];
+    else el.setAttribute(key, atributos[key]);
+  }
+  hijos.forEach(h => {
+    if (typeof h === 'string') el.appendChild(document.createTextNode(h));
+    else if (h instanceof Node) el.appendChild(h);
+  });
+  return el;
+}
+
+function escapeHtml(texto) {
+  if (texto === null || texto === undefined) return '';
+  return String(texto)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+function escapeAttr(t) { return escapeHtml(t); }
+
+/* ============ 5. FORMATEO ============ */
+function formatearPrecio(valor, moneda = 'USD') {
+  const num = Number(valor);
+  if (isNaN(num)) return '—';
+  const simbolos = { USD: '$', EUR: '€', CUP: 'CUP $', MLC: 'MLC $' };
+  return (simbolos[moneda] || '$') + num.toFixed(2);
+}
+
+function formatearNumero(n) {
+  const num = Number(n) || 0;
+  if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+  if (num >= 1000) return (num / 1000).toFixed(1) + 'k';
+  return String(num);
+}
+
+function tiempoRelativo(fechaISO) {
+  if (!fechaISO) return '';
+  const diff = Math.floor((new Date() - new Date(fechaISO)) / 1000);
+  if (diff < 60) return 'ahora';
+  if (diff < 3600) return Math.floor(diff / 60) + ' min';
+  if (diff < 86400) return Math.floor(diff / 3600) + ' h';
+  if (diff < 2592000) return Math.floor(diff / 86400) + ' d';
+  if (diff < 31536000) return Math.floor(diff / 2592000) + ' meses';
+  return Math.floor(diff / 31536000) + ' años';
+}
+
+/* ============ 6. DEBOUNCE ============ */
+function debounce(fn, ms = 300) {
+  let timer = null;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), ms);
+  };
+}
+
+/* ============ 7. TOKEN (localStorage) ============ */
+function guardarToken(t) { try { localStorage.setItem('nexo_token', t); } catch (e) {} }
+function leerToken() { try { return localStorage.getItem('nexo_token'); } catch (e) { return null; } }
+function borrarToken() { try { localStorage.removeItem('nexo_token'); } catch (e) {} }
+
+/* ============ 8. TOAST ============ */
+function toast(mensaje, tipo = 'info') {
+  const contenedor = qs('#toast-raiz');
+  if (!contenedor) return;
+  const el = crearEl('div', { clase: 'toast toast-' + tipo, texto: String(mensaje), role: 'status' });
+  contenedor.appendChild(el);
+  setTimeout(() => {
+    el.style.transition = 'opacity 0.3s, transform 0.3s';
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(10px)';
+    setTimeout(() => el.remove(), 320);
+  }, 3500);
+}
+
+/* ============ 9. MODALES ============ */
+function abrirModal(titulo, contenidoHTML, opciones = {}) {
+  const raiz = qs('#modal-raiz') || document.body;
+  const fondo = crearEl('div', {
+    clase: 'modal-fondo',
+    role: 'dialog',
+    'aria-modal': 'true',
+    'aria-label': titulo || 'Diálogo'
+  });
+  const caja = crearEl('div', { clase: 'modal-caja' });
+
+  const cerrar = crearEl('button', {
+    clase: 'modal-cerrar',
+    'aria-label': 'Cerrar',
+    texto: '×'
+  });
+  cerrar.addEventListener('click', () => cerrarModal(fondo));
+  caja.appendChild(cerrar);
+
+  if (titulo) {
+    const h = crearEl('h2', { clase: 'modal-titulo', texto: titulo });
+    caja.appendChild(h);
+  }
+
+  const cuerpo = crearEl('div');
+  cuerpo.innerHTML = contenidoHTML;
+  caja.appendChild(cuerpo);
+  fondo.appendChild(caja);
+
+  if (opciones.cerrarFuera !== false) {
+    fondo.addEventListener('click', (e) => {
+      if (e.target === fondo) cerrarModal(fondo);
+    });
+  }
+
+  const onKey = (e) => { if (e.key === 'Escape') cerrarModal(fondo); };
+  document.addEventListener('keydown', onKey);
+  fondo._onKey = onKey;
+
+  raiz.appendChild(fondo);
+  return { fondo, caja, cuerpo, cerrar };
+}
+
+function cerrarModal(fondo) {
+  if (!fondo) return;
+  if (fondo._onKey) {
+    document.removeEventListener('keydown', fondo._onKey);
+    fondo._onKey = null;
+  }
+  fondo.style.opacity = '0';
+  setTimeout(() => fondo.remove(), 180);
+}
+
+/* ============ 10. VALIDACIÓN ============ */
+function emailValido(email) {
+  if (!email || typeof email !== 'string') return false;
+  const l = email.trim();
+  if (l.length < 5 || l.length > 254) return false;
+  if (l.indexOf('@') < 1 || l.indexOf('.') < 3) return false;
+  if (l.indexOf(' ') !== -1) return false;
+  return true;
+}
+function pinValido(pin) {
+  if (!pin) return false;
+  const s = String(pin);
+  if (s.length < 4 || s.length > 8) return false;
+  return /^\d+$/.test(s);
+}
+function urlValida(url) {
+  if (!url || typeof url !== 'string') return false;
+  return /^https?:\/\/.+/.test(url.trim());
+}
+
+/* ============ 11. LOG ============ */
+const DEBUG = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
+function log(...args) { if (DEBUG) console.log('[NEXO]', ...args); }
+
+/* ============================================================
+   AUTENTICACIÓN
+   ============================================================ */
+
+async function registrar(email, pin, alias, codigoReferido) {
+  if (!emailValido(email)) return { ok: false, error: 'Email inválido.' };
+  if (!pinValido(pin)) return { ok: false, error: 'PIN debe tener 4 a 8 dígitos.' };
+  if (!alias || alias.trim().length < 3 || alias.trim().length > 24) {
+    return { ok: false, error: 'Alias debe tener 3 a 24 caracteres.' };
+  }
+  if (!/^[a-zA-Z0-9_]+$/.test(alias.trim())) {
+    return { ok: false, error: 'Alias solo puede tener letras, números y _' };
+  }
+
+  const r = await http(SUPABASE_URL + '/auth/v1/signup', {
+    method: 'POST',
+    body: JSON.stringify({
+      email: email.trim().toLowerCase(),
+      password: String(pin),
+      data: { alias: alias.trim() }
+    })
+  });
+
+  if (!r.ok) {
+    let msg = r.error || 'Error al registrar.';
+    if (msg.indexOf('already registered') !== -1 || msg.indexOf('already exists') !== -1) {
+      msg = 'Ese email ya está registrado.';
+    } else if (msg.indexOf('password') !== -1) {
+      msg = 'PIN demasiado corto. Mínimo 6 caracteres para Supabase.';
+    }
+    return { ok: false, error: msg };
+  }
+
+  const token = (r.data && r.data.access_token) || null;
+  if (!token) {
+    return { ok: false, error: 'Cuenta creada. Revisa tu email para confirmar antes de entrar.' };
+  }
+
+  guardarToken(token);
+
+  // Actualizar alias si el trigger no lo puso bien
+  if (r.data.user && r.data.user.id) {
+    await http(
+      SUPABASE_URL + '/rest/v1/perfiles?id=eq.' + r.data.user.id,
+      {
+        method: 'PATCH',
+        headers: { 'Prefer': 'return=minimal' },
+        body: JSON.stringify({ alias: alias.trim() })
+      }
+    );
+    if (codigoReferido && codigoReferido.trim()) {
+      await procesarReferido(codigoReferido.trim());
+    }
+    await cargarPerfil();
+  }
+
+  return { ok: true };
+}
+
+async function login(email, pin) {
+  if (!emailValido(email)) return { ok: false, error: 'Email inválido.' };
+  if (!pin || String(pin).length < 4) return { ok: false, error: 'PIN inválido.' };
+
+  const r = await http(SUPABASE_URL + '/auth/v1/token?grant_type=password', {
+    method: 'POST',
+    body: JSON.stringify({
+      email: email.trim().toLowerCase(),
+      password: String(pin)
+    })
+  });
+
+  if (!r.ok) {
+    let msg = r.error || 'Error al iniciar sesión.';
+    if (msg.indexOf('Invalid login') !== -1 || msg.indexOf('invalid_grant') !== -1) {
+      msg = 'Email o PIN incorrectos.';
+    } else if (msg.indexOf('Email not confirmed') !== -1) {
+      msg = 'Confirma tu email antes de entrar.';
+    }
+    return { ok: false, error: msg };
+  }
+
+  guardarToken(r.data.access_token);
+  await cargarPerfil();
+
+  if (USUARIO_ACTUAL && USUARIO_ACTUAL.baneado) {
+    borrarToken();
+    USUARIO_ACTUAL = null;
+    return { ok: false, error: 'Tu cuenta está suspendida. Contacta al equipo.' };
+  }
+
+  return { ok: true };
+}
+
+async function logout() {
+  const token = leerToken();
+  if (token) {
+    await http(SUPABASE_URL + '/auth/v1/logout', { method: 'POST' });
+  }
+  borrarToken();
+  USUARIO_ACTUAL = null;
+  CARRITO = [];
+  toast('Sesión cerrada.', 'ok');
+  setTimeout(() => location.reload(), 500);
+}
+
+async function cargarPerfil() {
+  const token = leerToken();
+  if (!token) { USUARIO_ACTUAL = null; return null; }
+
+  const rAuth = await http(SUPABASE_URL + '/auth/v1/user');
+  if (!rAuth.ok || !rAuth.data || !rAuth.data.id) {
+    borrarToken();
+    USUARIO_ACTUAL = null;
+    return null;
+  }
+
+  const rPerfil = await http(
+    SUPABASE_URL + '/rest/v1/perfiles?id=eq.' + rAuth.data.id + '&select=*'
+  );
+
+  if (!rPerfil.ok || !Array.isArray(rPerfil.data) || rPerfil.data.length === 0) {
+    USUARIO_ACTUAL = null;
+    return null;
+  }
+
+  USUARIO_ACTUAL = rPerfil.data[0];
+  return USUARIO_ACTUAL;
+}
+
+async function procesarReferido(codigo) {
+  if (!codigo) return;
+  const r = await http(SUPABASE_URL + '/rest/v1/rpc/procesar_referido', {
+    method: 'POST',
+    body: JSON.stringify({ p_codigo: codigo })
+  });
+  if (!r.ok) log('No se pudo procesar referido:', r.error);
+}
+
+function detectarReferidoURL() {
+  const params = new URLSearchParams(location.search);
+  const ref = params.get('ref');
+  if (ref) {
+    try { sessionStorage.setItem('nexo_ref', ref); } catch (e) {}
+  }
+}
+function leerReferidoGuardado() {
+  try { return sessionStorage.getItem('nexo_ref') || ''; } catch (e) { return ''; }
+}
+
+/* ============================================================
+   MODALES DE AUTH
+   ============================================================ */
+
+function mostrarModalRegistro() {
+  const refGuardado = leerReferidoGuardado();
+  const contenido = `
+    <p style="font-size:13px; color:var(--tx-3); margin-bottom:20px;">
+      Gratis · Solo email · Sin tarjeta
+    </p>
+    <form id="form-registro" autocomplete="off">
+      <div class="campo">
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" required placeholder="tu@email.com" autocomplete="email">
+        <div class="campo-ayuda">Nunca lo compartimos con nadie.</div>
+      </div>
+      <div class="campo">
+        <label for="reg-alias">Alias público</label>
+        <input type="text" id="reg-alias" required minlength="3" maxlength="24" placeholder="ej: cazador_habana" pattern="[a-zA-Z0-9_]+">
+        <div class="campo-ayuda">Así te verán los demás. 3-24 caracteres, sin espacios.</div>
+      </div>
+      <div class="campo">
+        <label for="reg-pin">PIN (mínimo 6 dígitos)</label>
+        <input type="password" id="reg-pin" required inputmode="numeric" pattern="[0-9]{6,8}" placeholder="••••••" maxlength="8">
+        <div class="campo-ayuda">Solo números. Mínimo 6 para seguridad.</div>
+      </div>
+      <div class="campo">
+        <label for="reg-referido">Código de referido (opcional)</label>
+        <input type="text" id="reg-referido" maxlength="12" placeholder="ej: ABC123XY" value="${escapeAttr(refGuardado)}">
+        <div class="campo-ayuda">Si te invitaron, ganas +25 NXC. Tu amigo gana +50.</div>
+      </div>
+      <div class="aviso aviso-info" style="font-size:12px;">
+        Al registrarte aceptas los
+        <a data-accion="abrir-legal" data-legal="terminos" style="text-decoration:underline; cursor:pointer;">Términos</a> y la
+        <a data-accion="abrir-legal" data-legal="privacidad" style="text-decoration:underline; cursor:pointer;">Privacidad</a>.
+      </div>
+      <button type="submit" class="btn btn-violeta btn-bloque btn-grande mt-16">Crear cuenta →</button>
+    </form>
+    <div class="texto-centro mt-16">
+      <a data-accion="abrir-login" style="font-size:13px; cursor:pointer;">¿Ya tienes cuenta? Entrar →</a>
+    </div>
+  `;
+  const { cuerpo, fondo } = abrirModal('Empezar ahora', contenido);
+  const form = cuerpo.querySelector('#form-registro');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Creando cuenta...';
+    const r = await registrar(
+      form.querySelector('#reg-email').value,
+      form.querySelector('#reg-pin').value,
+      form.querySelector('#reg-alias').value,
+      form.querySelector('#reg-referido').value
+    );
+    if (!r.ok) {
+      toast(r.error, 'error');
+      btn.disabled = false;
+      btn.textContent = 'Crear cuenta →';
+      return;
+    }
+    toast('¡Cuenta creada! Bienvenido a Nexo.', 'ok');
+    cerrarModal(fondo);
+    setTimeout(() => location.reload(), 800);
+  });
+}
+
+function mostrarModalLogin() {
+  const contenido = `
+    <form id="form-login" autocomplete="off">
+      <div class="campo">
+        <label for="log-email">Email</label>
+        <input type="email" id="log-email" required placeholder="tu@email.com" autocomplete="email">
+      </div>
+      <div class="campo">
+        <label for="log-pin">PIN</label>
+        <input type="password" id="log-pin" required inputmode="numeric" placeholder="••••••" maxlength="8">
+      </div>
+      <button type="submit" class="btn btn-violeta btn-bloque btn-grande mt-16">Entrar →</button>
+    </form>
+    <div class="texto-centro mt-16">
+      <a data-accion="abrir-registro" style="font-size:13px; cursor:pointer;">¿No tienes cuenta? Crear gratis →</a>
+    </div>
+  `;
+  const { cuerpo, fondo } = abrirModal('Entrar a Nexo', contenido);
+  const form = cuerpo.querySelector('#form-login');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Entrando...';
+    const r = await login(form.querySelector('#log-email').value, form.querySelector('#log-pin').value);
+    if (!r.ok) {
+      toast(r.error, 'error');
+      btn.disabled = false;
+      btn.textContent = 'Entrar →';
+      return;
+    }
+    toast('¡Bienvenido!', 'ok');
+    cerrarModal(fondo);
+    setTimeout(() => location.reload(), 500);
+  });
+}
+
+/* ============================================================
+   CATÁLOGOS
+   ============================================================ */
+
+async function cargarCatalogos() {
+  const [rCat, rTie] = await Promise.all([
+    http(SUPABASE_URL + '/rest/v1/categorias?select=*&order=orden.asc'),
+    http(SUPABASE_URL + '/rest/v1/tiendas?select=*&order=nombre.asc')
+  ]);
+  CATEGORIAS = Array.isArray(rCat.data) ? rCat.data : [];
+  TIENDAS = Array.isArray(rTie.data) ? rTie.data : [];
+  const selCat = qs('#filtro-categoria');
+  const selTie = qs('#filtro-tienda');
+  if (selCat) {
+    CATEGORIAS.forEach(c => {
+      selCat.appendChild(crearEl('option', { value: c.id, texto: (c.emoji || '') + ' ' + c.nombre }));
+    });
+  }
+  if (selTie) {
+    TIENDAS.forEach(t => {
+      selTie.appendChild(crearEl('option', { value: t.id, texto: t.nombre }));
+    });
+  }
+}
+
+/* ============================================================
+   OFERTAS
+   ============================================================ */
+
+function pintarSkeletons() {
+  const grid = qs('#grid-ofertas');
+  if (!grid) return;
+  grid.innerHTML = '';
+  for (let i = 0; i < 6; i++) {
+    grid.appendChild(crearEl('div', { clase: 'skeleton' }, [
+      crearEl('div', { clase: 'skeleton-img' }),
+      crearEl('div', { clase: 'skeleton-body' }, [
+        crearEl('div', { clase: 'skeleton-line titulo' }),
+        crearEl('div', { clase: 'skeleton-line' }),
+        crearEl('div', { clase: 'skeleton-line corta' })
+      ])
+    ]));
+  }
+}
+
+async function cargarOfertas(filtros = {}) {
+  const f = { ...ULTIMO_FILTRO, ...filtros };
+  ULTIMO_FILTRO = f;
+  const grid = qs('#grid-ofertas');
+  if (!grid) return;
+
+  pintarSkeletons();
+
+  let url = SUPABASE_URL + '/rest/v1/ofertas?select=*&activa=eq.true';
+  if (f.categoria) url += '&categoria_id=eq.' + f.categoria;
+  if (f.tienda) url += '&tienda_id=eq.' + f.tienda;
+  if (f.buscar && f.buscar.trim()) {
+    const q = encodeURIComponent('%' + f.buscar.trim() + '%');
+    url += '&or=(titulo.ilike.' + q + ',descripcion.ilike.' + q + ')';
+  }
+  const ordenes = {
+    recientes: 'creado_en.desc',
+    votos: 'votos_total.desc',
+    'precio-asc': 'precio.asc',
+    'precio-desc': 'precio.desc'
+  };
+  url += '&order=patrocinada.desc,' + (ordenes[f.orden] || 'creado_en.desc') + '&limit=50';
+
+  const r = await http(url);
+
+  if (!r.ok) {
+    grid.innerHTML = '<div class="aviso aviso-error">No se pudieron cargar las ofertas. ' + escapeHtml(r.error || '') + '</div>';
+    return;
+  }
+
+  const ofertas = Array.isArray(r.data) ? r.data : [];
+
+  if (ofertas.length === 0) {
+    grid.innerHTML = `
+      <div class="card" style="grid-column: 1 / -1; padding: 40px; text-align: center;">
+        <h3 class="card-titulo" style="justify-content: center;">Todavía no hay ofertas aquí</h3>
+        <p style="margin: 12px 0 20px;">Sé el primero en publicar y empieza a ganar.</p>
+        <button class="btn btn-violeta" data-accion="abrir-publicar">Publicar primera oferta →</button>
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = '';
+  ofertas.forEach(o => grid.appendChild(crearCardOferta(o)));
+}
+
+function crearCardOferta(o) {
+  const categoria = CATEGORIAS.find(c => c.id === o.categoria_id);
+  const tienda = TIENDAS.find(t => t.id === o.tienda_id);
+
+  const card = crearEl('article', { clase: 'card', 'data-oferta-id': o.id });
+
+  // Imagen con badges
+  const imgWrap = crearEl('div', { clase: 'card-img-wrap' });
+  const badgesTop = crearEl('div', { clase: 'card-badges-top' });
+
+  if (o.patrocinada) {
+    badgesTop.appendChild(crearEl('span', { clase: 'card-badge card-badge-patrocinado', texto: '★ Patrocinado' }));
+  }
+  if (o.verificada) {
+    badgesTop.appendChild(crearEl('span', { clase: 'card-badge card-badge-verificada', texto: '✓ Verificada' }));
+  }
+  if (categoria) {
+    badgesTop.appendChild(crearEl('span', { clase: 'card-badge card-badge-categoria', texto: (categoria.emoji || '') + ' ' + categoria.nombre }));
+  }
+  imgWrap.appendChild(badgesTop);
+
+  const btnFav = crearEl('button', {
+    clase: 'card-fav',
+    'aria-label': 'Guardar en favoritos',
+    texto: '♡'
+  });
+  btnFav.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleFavorito(o.id, btnFav);
+  });
+  imgWrap.appendChild(btnFav);
+
+  if (o.imagen_url) {
+    const img = crearEl('img', {
+      clase: 'card-imagen',
+      src: o.imagen_url,
+      alt: o.titulo,
+      loading: 'lazy'
+    });
+    img.addEventListener('error', () => {
+      img.style.display = 'none';
+      imgWrap.style.background = 'linear-gradient(135deg, var(--primary-soft), var(--bg-2))';
+    });
+    imgWrap.appendChild(img);
+  } else {
+    imgWrap.style.background = 'linear-gradient(135deg, var(--primary-soft), var(--bg-2))';
+  }
+  card.appendChild(imgWrap);
+
+  // Cuerpo
+  const body = crearEl('div', { clase: 'card-body' });
+  body.appendChild(crearEl('h3', { clase: 'card-titulo', texto: o.titulo }));
+  if (o.descripcion) {
+    body.appendChild(crearEl('p', { clase: 'card-desc', texto: o.descripcion }));
+  }
+
+  const precioWrap = crearEl('div', { clase: 'card-precio-wrap' });
+  precioWrap.appendChild(crearEl('span', { clase: 'card-precio', texto: formatearPrecio(o.precio, o.moneda) }));
+  if (o.precio_antes && o.precio_antes > o.precio) {
+    precioWrap.appendChild(crearEl('span', { clase: 'card-precio-antes', texto: formatearPrecio(o.precio_antes, o.moneda) }));
+    const descuento = Math.round((1 - o.precio / o.precio_antes) * 100);
+    if (descuento > 0) {
+      precioWrap.appendChild(crearEl('span', { clase: 'card-descuento', texto: '-' + descuento + '%' }));
+    }
+  }
+  body.appendChild(precioWrap);
+
+  const meta = crearEl('div', { clase: 'card-meta' });
+  meta.appendChild(crearEl('span', { texto: '▲ ' + (o.votos_total || 0) }));
+  meta.appendChild(crearEl('span', { texto: '♥ ' + (o.favoritos_total || 0) }));
+  meta.appendChild(crearEl('span', { texto: tiempoRelativo(o.creado_en) }));
+  if (tienda) meta.appendChild(crearEl('span', { texto: tienda.nombre }));
+  body.appendChild(meta);
+
+  card.appendChild(body);
+
+  // Acciones
+  const acciones = crearEl('div', { clase: 'card-acciones' });
+  if (o.link_afiliado && urlValida(o.link_afiliado)) {
+    const btnIr = crearEl('a', {
+      clase: 'btn btn-violeta',
+      href: o.link_afiliado,
+      target: '_blank',
+      rel: 'noopener noreferrer nofollow sponsored',
+      texto: 'Ver oferta →'
+    });
+    btnIr.addEventListener('click', () => registrarClic(o.id));
+    acciones.appendChild(btnIr);
+  }
+  const btnCarrito = crearEl('button', {
+    clase: 'btn btn-outline btn-icono',
+    'aria-label': 'Añadir al carrito',
+    texto: '🛒'
+  });
+  btnCarrito.addEventListener('click', () => anadirAlCarrito(o.id));
+  acciones.appendChild(btnCarrito);
+  card.appendChild(acciones);
+
+  return card;
+}
+
+async function registrarClic(ofertaId) {
+  try {
+    await http(SUPABASE_URL + '/rest/v1/rpc/incrementar_clics', {
+      method: 'POST',
+      body: JSON.stringify({ p_oferta_id: ofertaId })
+    });
+  } catch (e) { log('Error clic:', e); }
+}
+
+async function toggleFavorito(ofertaId, boton) {
+  if (!USUARIO_ACTUAL) {
+    toast('Inicia sesión para guardar favoritos.', 'aviso');
+    mostrarModalLogin();
+    return;
+  }
+  boton.disabled = true;
+  const r = await http(SUPABASE_URL + '/rest/v1/rpc/toggle_favorito', {
+    method: 'POST',
+    body: JSON.stringify({ p_oferta_id: ofertaId })
+  });
+  boton.disabled = false;
+  if (!r.ok) {
+    toast('No se pudo guardar.', 'error');
+    return;
+  }
+  if (r.data.favorito) {
+    boton.textContent = '♥';
+    boton.classList.add('activo');
+    toast('Guardado en favoritos ♥', 'ok');
+  } else {
+    boton.textContent = '♡';
+    boton.classList.remove('activo');
+  }
+}
+
+/* ============================================================
+   PUBLICAR OFERTA
+   ============================================================ */
+
+function mostrarModalPublicar() {
+  if (!USUARIO_ACTUAL) {
+    toast('Inicia sesión para publicar.', 'aviso');
+    mostrarModalLogin();
+    return;
+  }
+  const saldo = USUARIO_ACTUAL.nexo_coins || 0;
+  if (saldo < COSTE_PUBLICAR_NXC) {
+    toast('Necesitas ' + COSTE_PUBLICAR_NXC + ' NXC. Tienes ' + saldo + '.', 'aviso');
+    return;
+  }
+
+  const opcionesCat = CATEGORIAS.map(c =>
+    `<option value="${c.id}">${escapeHtml((c.emoji || '') + ' ' + c.nombre)}</option>`
+  ).join('');
+  const opcionesTie = TIENDAS.map(t =>
+    `<option value="${t.id}">${escapeHtml(t.nombre)}</option>`
+  ).join('');
+
+  const contenido = `
+    <p style="font-size:13px; color:var(--tx-3); margin-bottom:20px;">
+      Cuesta <strong>${COSTE_PUBLICAR_NXC} NXC</strong>. Tienes <strong>${saldo}</strong>.
+    </p>
+    <form id="form-publicar" autocomplete="off">
+      <div class="campo">
+        <label for="pub-titulo">Título</label>
+        <input type="text" id="pub-titulo" required minlength="5" maxlength="120" placeholder="ej: Auriculares bluetooth baratos">
+      </div>
+      <div class="campo">
+        <label for="pub-descripcion">Descripción (opcional)</label>
+        <textarea id="pub-descripcion" maxlength="800" placeholder="¿Por qué vale la pena?"></textarea>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div class="campo">
+          <label for="pub-precio">Precio</label>
+          <input type="number" id="pub-precio" required min="0" step="0.01" placeholder="0.00" inputmode="decimal">
+        </div>
+        <div class="campo">
+          <label for="pub-precio-antes">Antes (opcional)</label>
+          <input type="number" id="pub-precio-antes" min="0" step="0.01" placeholder="0.00" inputmode="decimal">
+        </div>
+      </div>
+      <div class="campo">
+        <label for="pub-moneda">Moneda</label>
+        <select id="pub-moneda">
+          <option value="USD">USD $</option>
+          <option value="EUR">EUR €</option>
+          <option value="CUP">CUP</option>
+          <option value="MLC">MLC</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="pub-categoria">Categoría</label>
+        <select id="pub-categoria" required><option value="">Elige una</option>${opcionesCat}</select>
+      </div>
+      <div class="campo">
+        <label for="pub-tienda">Tienda</label>
+        <select id="pub-tienda" required><option value="">Elige una</option>${opcionesTie}</select>
+      </div>
+      <div class="campo">
+        <label for="pub-link">Link de afiliado</label>
+        <input type="url" id="pub-link" required placeholder="https://..." inputmode="url">
+        <div class="campo-ayuda">Tu link personal. La tienda te paga a ti.</div>
+      </div>
+      <div class="campo">
+        <label for="pub-imagen">URL de imagen (opcional)</label>
+        <input type="url" id="pub-imagen" placeholder="https://..." inputmode="url">
+      </div>
+      <div class="aviso aviso-info" style="font-size:12px;">
+        <strong>Transparencia:</strong> cada venta te da el 80%. Nexo cobra 20%.
+      </div>
+      <button type="submit" class="btn btn-violeta btn-bloque btn-grande mt-16">
+        Publicar · ${COSTE_PUBLICAR_NXC} NXC →
+      </button>
+    </form>
+  `;
+
+  const { cuerpo, fondo } = abrirModal('Publicar oferta', contenido);
+  const form = cuerpo.querySelector('#form-publicar');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Publicando...';
+
+    const titulo = form.querySelector('#pub-titulo').value.trim();
+    const descripcion = form.querySelector('#pub-descripcion').value.trim() || null;
+    const precio = parseFloat(form.querySelector('#pub-precio').value);
+    const precioAntes = parseFloat(form.querySelector('#pub-precio-antes').value) || null;
+    const moneda = form.querySelector('#pub-moneda').value;
+    const categoriaId = parseInt(form.querySelector('#pub-categoria').value, 10);
+    const tiendaId = parseInt(form.querySelector('#pub-tienda').value, 10);
+    const link = form.querySelector('#pub-link').value.trim();
+    const imagen = form.querySelector('#pub-imagen').value.trim() || null;
+
+    if (titulo.length < 5) {
+      toast('Título muy corto.', 'error');
+      btn.disabled = false; btn.textContent = 'Publicar →';
+      return;
+    }
+    if (!urlValida(link)) {
+      toast('Link inválido.', 'error');
+      btn.disabled = false; btn.textContent = 'Publicar →';
+      return;
+    }
+    if (!categoriaId || !tiendaId) {
+      toast('Elige categoría y tienda.', 'error');
+      btn.disabled = false; btn.textContent = 'Publicar →';
+      return;
+    }
+    if (isNaN(precio) || precio < 0) {
+      toast('Precio inválido.', 'error');
+      btn.disabled = false; btn.textContent = 'Publicar →';
+      return;
+    }
+    if (imagen && !urlValida(imagen)) {
+      toast('URL de imagen inválida.', 'error');
+      btn.disabled = false; btn.textContent = 'Publicar →';
+      return;
+    }
+
+    const r = await http(SUPABASE_URL + '/rest/v1/rpc/publicar_oferta', {
+      method: 'POST',
+      body: JSON.stringify({
+        p_titulo: titulo,
+        p_descripcion: descripcion,
+        p_precio: precio,
+        p_moneda: moneda,
+        p_categoria_id: categoriaId,
+        p_tienda_id: tiendaId,
+        p_link_afiliado: link,
+        p_imagen_url: imagen,
+        p_coste: COSTE_PUBLICAR_NXC
+      })
+    });
+
+    if (!r.ok) {
+      toast('Error al publicar: ' + (r.error || ''), 'error');
+      btn.disabled = false; btn.textContent = 'Publicar →';
+      return;
+    }
+
+    USUARIO_ACTUAL.nexo_coins = r.data.nuevo_saldo;
+    toast('¡Oferta publicada!', 'ok');
+    cerrarModal(fondo);
+    actualizarUIHeader();
+    setTimeout(() => cargarOfertas(), 300);
+  });
+}
+
+/* ============================================================
+   CARRITO
+   ============================================================ */
+
+async function cargarCarrito() {
+  if (!USUARIO_ACTUAL) { CARRITO = []; actualizarContadorCarrito(); return; }
+  const r = await http(
+    SUPABASE_URL + '/rest/v1/carrito?usuario_id=eq.' + USUARIO_ACTUAL.id +
+    '&select=*,ofertas(*)&order=creado_en.desc'
+  );
+  CARRITO = (r.ok && Array.isArray(r.data)) ? r.data : [];
+  actualizarContadorCarrito();
+}
+
+async function anadirAlCarrito(ofertaId) {
+  if (!USUARIO_ACTUAL) {
+    toast('Inicia sesión para guardar.', 'aviso');
+    mostrarModalLogin();
+    return;
+  }
+  const r = await http(SUPABASE_URL + '/rest/v1/carrito', {
+    method: 'POST',
+    headers: { 'Prefer': 'resolution=ignore-duplicates' },
+    body: JSON.stringify({
+      usuario_id: USUARIO_ACTUAL.id,
+      oferta_id: ofertaId,
+      cantidad: 1
+    })
+  });
+  if (!r.ok) {
+    toast('No se pudo añadir al carrito.', 'error');
+    return;
+  }
+  toast('Añadido al carrito 🛒', 'ok');
+  await cargarCarrito();
+}
+
+async function quitarDelCarrito(carritoId) {
+  const r = await http(
+    SUPABASE_URL + '/rest/v1/carrito?id=eq.' + carritoId,
+    { method: 'DELETE' }
+  );
+  if (!r.ok) { toast('No se pudo quitar.', 'error'); return; }
+  toast('Quitado.', 'ok');
+  await cargarCarrito();
+  const modal = qs('.modal-fondo');
+  if (modal) { cerrarModal(modal); setTimeout(mostrarModalCarrito, 200); }
+}
+
+function actualizarContadorCarrito() {
+  const btn = qs('#header-carrito');
+  if (!btn) return;
+  const total = CARRITO.reduce((s, i) => s + (i.cantidad || 1), 0);
+  btn.textContent = total > 0 ? '🛒 ' + total : '🛒';
+}
+
+function mostrarModalCarrito() {
+  if (!USUARIO_ACTUAL) {
+    mostrarModalLogin();
+    return;
+  }
+
+  if (CARRITO.length === 0) {
+    const { fondo } = abrirModal('Carrito', `
+      <div style="text-align: center; padding: 20px 0;">
+        <div style="font-size: 48px; margin-bottom: 16px;">🛒</div>
+        <p>Tu carrito está vacío.</p>
+        <p style="margin-top: 8px; color: var(--tx-3); font-size: 14px;">Explora ofertas y guarda las que te interesen.</p>
+        <button class="btn btn-violeta mt-24" id="btn-cerrar-vacio">Explorar ofertas →</button>
+      </div>
+    `);
+    const b = qs('#btn-cerrar-vacio');
+    if (b) b.addEventListener('click', () => {
+      cerrarModal(fondo);
+      const el = qs('#explorar');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    });
+    return;
+  }
+
+  const itemsHTML = CARRITO.map(item => {
+    const o = item.ofertas;
+    if (!o) return '';
+    return `
+      <div style="padding: 14px; border: 1px solid var(--bd); border-radius: var(--r-md); margin-bottom: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px;">
+          <div style="flex: 1; min-width: 0;">
+            <div style="font-weight: 700; font-size: 15px; margin-bottom: 4px;">${escapeHtml(o.titulo)}</div>
+            <div style="font-size: 13px; color: var(--tx-3);">
+              ${formatearPrecio(o.precio, o.moneda)} · cant. ${item.cantidad || 1}
+            </div>
+          </div>
+          <button class="btn btn-outline btn-icono" data-quitar="${item.id}" aria-label="Quitar" style="padding: 6px 10px;">×</button>
+        </div>
+        <div style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap;">
+          <a href="${escapeAttr(o.link_afiliado || '#')}" target="_blank" rel="noopener noreferrer nofollow sponsored"
+             class="btn btn-violeta" style="text-decoration: none; flex: 1; font-size: 13px;">Ir a la tienda →</a>
+          <button class="btn btn-outline" data-confirmar="${o.id}" data-monto="${o.precio || 0}" style="font-size: 13px;">Ya compré</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const contenido = `
+    <p style="font-size: 13px; color: var(--tx-3); margin-bottom: 16px;">
+      ${CARRITO.length} oferta(s) guardada(s)
+    </p>
+    ${itemsHTML}
+    <div class="aviso aviso-info" style="font-size: 12px;">
+      Las compras se hacen en la tienda original. La comisión la paga la tienda al cazador.
+    </div>
+    <button class="btn btn-outline btn-bloque mt-16" id="btn-cerrar-carrito">Cerrar</button>
+  `;
+
+  const { fondo, cuerpo } = abrirModal('Mi carrito', contenido);
+
+  cuerpo.querySelectorAll('[data-quitar]').forEach(btn => {
+    btn.addEventListener('click', () => quitarDelCarrito(btn.getAttribute('data-quitar')));
+  });
+  cuerpo.querySelectorAll('[data-confirmar]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      btn.textContent = 'Registrando...';
+      const ofertaId = btn.getAttribute('data-confirmar');
+      const monto = parseFloat(btn.getAttribute('data-monto')) || 0;
+      await confirmarVenta(ofertaId, monto);
+      cerrarModal(fondo);
+      await cargarCarrito();
+    });
+  });
+  const bc = qs('#btn-cerrar-carrito');
+  if (bc) bc.addEventListener('click', () => cerrarModal(fondo));
+}
+
+async function confirmarVenta(ofertaId, montoTotal) {
+  const r = await http(SUPABASE_URL + '/rest/v1/rpc/confirmar_venta', {
+    method: 'POST',
+    body: JSON.stringify({
+      p_oferta_id: ofertaId,
+      p_monto_total: montoTotal
+    })
+  });
+  if (!r.ok) {
+    toast('No se pudo registrar la compra.', 'error');
+    return;
+  }
+  toast('¡Compra registrada! Comisión pendiente.', 'ok');
+}
+
+// Continúa en el MENSAJE D...
+/* ============================================================
+   LEADERBOARD
+   ============================================================ */
+
+async function cargarLeaderboard() {
+  const cont = qs('#leaderboard-lista');
+  if (!cont) return;
+  cont.innerHTML = '<div style="padding:20px; text-align:center; color:var(--tx-3);">Cargando...</div>';
+
+  const r = await http(
+    SUPABASE_URL + '/rest/v1/perfiles?select=alias,nivel,total_ventas,nexo_coins&order=total_ventas.desc&limit=10'
+  );
+
+  if (!r.ok || !Array.isArray(r.data) || r.data.length === 0) {
+    cont.innerHTML = '<div style="padding:20px; text-align:center; color:var(--tx-3);">Aún no hay cazadores destacados. Sé el primero.</div>';
+    return;
+  }
+
+  cont.innerHTML = '';
+  r.data.forEach((u, i) => {
+    const item = crearEl('div', { clase: 'leader-item' });
+    item.appendChild(crearEl('div', { clase: 'leader-pos', texto: String(i + 1) }));
+
+    const info = crearEl('div', { clase: 'leader-info' });
+    info.appendChild(crearEl('div', { clase: 'leader-nombre', texto: '@' + u.alias }));
+    info.appendChild(crearEl('div', { clase: 'leader-meta', texto: 'Nivel ' + (u.nivel || 1) }));
+    item.appendChild(info);
+
+    item.appendChild(crearEl('div', { clase: 'leader-valor', texto: (u.total_ventas || 0) + ' ventas' }));
+    cont.appendChild(item);
+  });
+}
+
+/* ============================================================
+   STATS PÚBLICAS (para portada)
+   ============================================================ */
+
+async function cargarStats() {
+  const [rOf, rUs, rCom, rTor] = await Promise.all([
+    http(SUPABASE_URL + '/rest/v1/ofertas?select=id&activa=eq.true'),
+    http(SUPABASE_URL + '/rest/v1/perfiles?select=id'),
+    http(SUPABASE_URL + '/rest/v1/comisiones?select=monto_usuario&estado=in.(confirmada,pagada)'),
+    http(SUPABASE_URL + '/rest/v1/torneos?select=premio_1,premio_2,premio_3')
+  ]);
+
+  const ofertas = Array.isArray(rOf.data) ? rOf.data.length : 0;
+  const usuarios = Array.isArray(rUs.data) ? rUs.data.length : 0;
+  const comisiones = Array.isArray(rCom.data)
+    ? rCom.data.reduce((s, c) => s + parseFloat(c.monto_usuario || 0), 0)
+    : 0;
+  const premios = Array.isArray(rTor.data)
+    ? rTor.data.reduce((s, t) => s + (parseFloat(t.premio_1 || 0) + parseFloat(t.premio_2 || 0) + parseFloat(t.premio_3 || 0)), 0)
+    : 0;
+
+  const elOf = qs('#stat-ofertas');
+  const elUs = qs('#stat-usuarios');
+  const elCom = qs('#stat-comisiones');
+  const elPre = qs('#stat-premios');
+  const elTopDeals = qs('#topbar-deals');
+
+  if (elOf) elOf.textContent = formatearNumero(ofertas);
+  if (elUs) elUs.textContent = formatearNumero(usuarios);
+  if (elCom) elCom.textContent = '$' + comisiones.toFixed(0);
+  if (elPre) elPre.textContent = '$' + premios.toFixed(0);
+  if (elTopDeals) elTopDeals.textContent = ofertas;
+
+  const elNuevos = qs('#topbar-nuevos');
+  if (elNuevos) {
+    elNuevos.textContent = usuarios > 0 ? usuarios + ' cazadores activos' : 'Sé el primero';
+  }
+}
+
+/* ============================================================
+   PERFIL DEL USUARIO
+   ============================================================ */
+
+function puedeReclamarBonus() {
+  if (!USUARIO_ACTUAL) return false;
+  const ultimo = USUARIO_ACTUAL.ultimo_bonus;
+  if (!ultimo) return true;
+  return (Date.now() - new Date(ultimo).getTime()) >= 24 * 60 * 60 * 1000;
+}
+
+function nivelNombre(n) {
+  const nombres = { 1: 'Novato', 2: 'Cazador', 3: 'Élite', 4: 'Leyenda', 5: 'Mítico' };
+  return nombres[n] || 'Novato';
+}
+
+function mostrarModalPerfil() {
+  if (!USUARIO_ACTUAL) {
+    mostrarModalLogin();
+    return;
+  }
+  const u = USUARIO_ACTUAL;
+  const bonusListo = puedeReclamarBonus();
+  const premium = u.es_premium ? '<span class="seccion-badge">★ Premium</span>' : '';
+  const racha = u.racha_bonus || 0;
+  const btnAdmin = u.es_tutor
+    ? '<button class="btn btn-rojo btn-bloque mb-8" data-accion="abrir-admin">⚙ Panel admin</button>'
+    : '';
+
+  const contenido = `
+    <div class="mb-16">
+      <div style="font-size: 12px; color: var(--tx-3); text-transform: uppercase; letter-spacing: 0.06em;">Alias</div>
+      <div style="font-size: 26px; font-weight: 900; margin-top: 4px;">@${escapeHtml(u.alias)}</div>
+      <div style="margin-top: 8px;">${premium}</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 20px 0; padding: 16px 0; border-top: 1px solid var(--bd); border-bottom: 1px solid var(--bd);">
+      <div>
+        <div style="font-size: 11px; color: var(--tx-3); text-transform: uppercase;">NexoCoins</div>
+        <div style="font-size: 22px; font-weight: 800; color: var(--primary);">${u.nexo_coins || 0}</div>
+      </div>
+      <div>
+        <div style="font-size: 11px; color: var(--tx-3); text-transform: uppercase;">Nivel</div>
+        <div style="font-size: 22px; font-weight: 800;">${u.nivel || 1} · ${nivelNombre(u.nivel)}</div>
+      </div>
+      <div>
+        <div style="font-size: 11px; color: var(--tx-3); text-transform: uppercase;">Racha</div>
+        <div style="font-size: 22px; font-weight: 800;">${racha}🔥</div>
+      </div>
+    </div>
+
+    <div style="background: var(--bg-2); padding: 14px; border-radius: var(--r-md); margin-bottom: 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+        <div>
+          <div style="font-weight: 800; font-size: 15px;">Bonus diario</div>
+          <div style="font-size: 12px; color: var(--tx-3);">+10 NXC cada 24h · Racha x${racha}</div>
+        </div>
+        <button class="btn ${bonusListo ? 'btn-lima' : 'btn-outline'}" id="btn-bonus" ${bonusListo ? '' : 'disabled'}>
+          ${bonusListo ? 'Reclamar' : 'Mañana'}
+        </button>
+      </div>
+    </div>
+
+    ${btnAdmin}
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px;">
+      <button class="btn btn-outline" data-accion="abrir-cartera">💰 Cartera</button>
+      <button class="btn btn-outline" data-accion="abrir-referidos">🎁 Referidos</button>
+      <button class="btn btn-outline" data-accion="abrir-movimientos">📊 Movimientos</button>
+      <button class="btn btn-outline" data-accion="abrir-retiros">💸 Retirar</button>
+    </div>
+
+    <button class="btn btn-outline btn-bloque" data-accion="logout">Cerrar sesión</button>
+  `;
+
+  const { cuerpo, fondo } = abrirModal('Mi perfil', contenido);
+  const btnBonus = cuerpo.querySelector('#btn-bonus');
+  if (btnBonus && bonusListo) {
+    btnBonus.addEventListener('click', () => {
+      cerrarModal(fondo);
+      setTimeout(reclamarBonus, 200);
+    });
+  }
+}
+
+async function reclamarBonus() {
+  if (!USUARIO_ACTUAL) { toast('Inicia sesión.', 'aviso'); return; }
+  if (!puedeReclamarBonus()) { toast('Ya reclamaste hoy.', 'aviso'); return; }
+
+  const r = await http(SUPABASE_URL + '/rest/v1/rpc/reclamar_bonus_diario', {
+    method: 'POST',
+    body: JSON.stringify({})
+  });
+
+  if (!r.ok) {
+    toast('No se pudo reclamar: ' + (r.error || ''), 'error');
+    return;
+  }
+  if (!r.data.ok) {
+    toast(r.data.error || 'Error.', 'aviso');
+    return;
+  }
+
+  toast('+' + r.data.coins + ' NXC · Racha ' + r.data.racha + ' días 🔥', 'ok');
+  await cargarPerfil();
+  actualizarUIHeader();
+}
+
+/* ============================================================
+   CARTERA (saldo, comisiones, retiros)
+   ============================================================ */
+
+async function cargarCartera() {
+  if (!USUARIO_ACTUAL) return null;
+
+  const r = await http(
+    SUPABASE_URL + '/rest/v1/comisiones?usuario_id=eq.' + USUARIO_ACTUAL.id +
+    '&select=*,ofertas(titulo)&order=creado_en.desc'
+  );
+
+  if (!r.ok) return { pendiente: 0, confirmado: 0, pagado: 0, detalle: [] };
+
+  const coms = Array.isArray(r.data) ? r.data : [];
+  let pendiente = 0, confirmado = 0, pagado = 0;
+
+  coms.forEach(c => {
+    const m = parseFloat(c.monto_usuario || 0);
+    if (c.estado === 'pagada') pagado += m;
+    else if (c.estado === 'confirmada') confirmado += m;
+    else pendiente += m;
+  });
+
+  return { pendiente, confirmado, pagado, total: pendiente + confirmado, detalle: coms };
+}
+
+async function mostrarModalCartera() {
+  if (!USUARIO_ACTUAL) { mostrarModalLogin(); return; }
+
+  const c = await cargarCartera();
+  if (!c) return;
+
+  const detalleHTML = c.detalle.length === 0
+    ? '<div class="aviso aviso-info">Aún no tienes comisiones. Publica ofertas y comparte.</div>'
+    : c.detalle.slice(0, 15).map(item => `
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--bd); gap: 12px;">
+          <div style="flex: 1; min-width: 0;">
+            <div style="font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              ${escapeHtml((item.ofertas && item.ofertas.titulo) || 'Oferta')}
+            </div>
+            <div style="font-size: 12px; color: var(--tx-3); margin-top: 2px;">
+              ${item.estado} · ${tiempoRelativo(item.creado_en)}
+            </div>
+          </div>
+          <div style="font-weight: 800; color: var(--green);">+$${parseFloat(item.monto_usuario || 0).toFixed(2)}</div>
+        </div>
+      `).join('');
+
+  const contenido = `
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;">
+      <div style="background: var(--green-soft); padding: 14px; border-radius: var(--r-md);">
+        <div style="font-size: 11px; color: #14532D; text-transform: uppercase; font-weight: 700;">Disponible</div>
+        <div style="font-size: 26px; font-weight: 900; color: #14532D; margin-top: 4px;">$${c.confirmado.toFixed(2)}</div>
+      </div>
+      <div style="background: var(--bg-2); padding: 14px; border-radius: var(--r-md);">
+        <div style="font-size: 11px; color: var(--tx-3); text-transform: uppercase; font-weight: 700;">Pendiente</div>
+        <div style="font-size: 26px; font-weight: 900; margin-top: 4px;">$${c.pendiente.toFixed(2)}</div>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+      <button class="btn btn-violeta" data-accion="abrir-retiros" style="flex: 1;">Retirar fondos →</button>
+    </div>
+
+    <h3 style="font-size: 16px; margin-bottom: 12px;">Historial</h3>
+    ${detalleHTML}
+
+    <div class="aviso aviso-info mt-24" style="font-size: 12px;">
+      <strong>Cómo ganamos todos:</strong> la tienda te paga a ti. Nexo cobra el 20% (15% con Pro o patrocinio).
+    </div>
+  `;
+
+  abrirModal('Mi cartera', contenido);
+}
+
+async function mostrarModalRetiros() {
+  if (!USUARIO_ACTUAL) { mostrarModalLogin(); return; }
+
+  const c = await cargarCartera();
+  if (!c) return;
+
+  const disponible = c.confirmado;
+
+  const contenido = `
+    <div style="background: var(--green-soft); padding: 16px; border-radius: var(--r-md); margin-bottom: 20px;">
+      <div style="font-size: 12px; color: #14532D; text-transform: uppercase; font-weight: 700;">Saldo disponible</div>
+      <div style="font-size: 32px; font-weight: 900; color: #14532D; margin-top: 4px;">$${disponible.toFixed(2)}</div>
+    </div>
+
+    <div class="aviso aviso-info" style="font-size: 12px;">
+      Retiro mínimo: <strong>$5 USD</strong>. Procesamos en 24-48h.
+      <strong>Verifica tu dirección antes de enviar.</strong>
+    </div>
+
+    <form id="form-retiro" autocomplete="off">
+      <div class="campo">
+        <label for="ret-monto">Monto a retirar (USD)</label>
+        <input type="number" id="ret-monto" required min="5" step="0.01" placeholder="5.00" inputmode="decimal">
+      </div>
+      <div class="campo">
+        <label for="ret-moneda">Moneda</label>
+        <select id="ret-moneda" required>
+          <option value="BTC">BTC (Bitcoin)</option>
+          <option value="USDT_TRC20">USDT TRC-20 (Tron)</option>
+          <option value="USDT_POLYGON">USDT Polygon</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="ret-direccion">Tu dirección de wallet</label>
+        <input type="text" id="ret-direccion" required minlength="20" placeholder="Dirección completa de tu wallet">
+        <div class="campo-ayuda">Asegúrate de que es la red correcta. No podemos revertir.</div>
+      </div>
+      <button type="submit" class="btn btn-violeta btn-bloque btn-grande mt-16">Solicitar retiro →</button>
+    </form>
+  `;
+
+  const { cuerpo, fondo } = abrirModal('Retirar fondos', contenido);
+  const form = cuerpo.querySelector('#form-retiro');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true; btn.textContent = 'Enviando...';
+
+    const monto = parseFloat(form.querySelector('#ret-monto').value);
+    const moneda = form.querySelector('#ret-moneda').value;
+    const direccion = form.querySelector('#ret-direccion').value.trim();
+
+    if (isNaN(monto) || monto < 5) {
+      toast('Monto mínimo $5.', 'error');
+      btn.disabled = false; btn.textContent = 'Solicitar retiro →';
+      return;
+    }
+    if (monto > disponible) {
+      toast('No tienes suficiente saldo.', 'error');
+      btn.disabled = false; btn.textContent = 'Solicitar retiro →';
+      return;
+    }
+    if (direccion.length < 20) {
+      toast('Dirección inválida.', 'error');
+      btn.disabled = false; btn.textContent = 'Solicitar retiro →';
+      return;
+    }
+
+    const r = await http(SUPABASE_URL + '/rest/v1/rpc/solicitar_retiro', {
+      method: 'POST',
+      body: JSON.stringify({
+        p_monto: monto,
+        p_moneda_crypto: moneda,
+        p_direccion: direccion
+      })
+    });
+
+    if (!r.ok || !r.data.ok) {
+      toast((r.data && r.data.error) || 'No se pudo procesar.', 'error');
+      btn.disabled = false; btn.textContent = 'Solicitar retiro →';
+      return;
+    }
+
+    toast('Retiro solicitado. Procesamos en 24-48h.', 'ok');
+    cerrarModal(fondo);
+  });
+}
+
+/* ============================================================
+   MOVIMIENTOS NXC
+   ============================================================ */
+
+async function mostrarModalMovimientos() {
+  if (!USUARIO_ACTUAL) { mostrarModalLogin(); return; }
+
+  const r = await http(
+    SUPABASE_URL + '/rest/v1/nexo_coins?usuario_id=eq.' + USUARIO_ACTUAL.id +
+    '&select=*&order=creado_en.desc&limit=50'
+  );
+
+  const movs = Array.isArray(r.data) ? r.data : [];
+
+  const lista = movs.length === 0
+    ? '<div class="aviso aviso-info">Sin movimientos todavía.</div>'
+    : movs.map(m => {
+        const positivo = m.cantidad > 0;
+        return `
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--bd); gap: 12px;">
+            <div style="flex: 1;">
+              <div style="font-weight: 700; font-size: 14px;">${escapeHtml(m.razon || 'Movimiento')}</div>
+              <div style="font-size: 12px; color: var(--tx-3); margin-top: 2px;">${tiempoRelativo(m.creado_en)}</div>
+            </div>
+            <div style="font-weight: 800; color: ${positivo ? 'var(--green)' : 'var(--red)'};">
+              ${positivo ? '+' : ''}${m.cantidad}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+  abrirModal('Movimientos NXC', `
+    <div style="background: var(--primary-soft); padding: 16px; border-radius: var(--r-md); margin-bottom: 20px;">
+      <div style="font-size: 12px; color: var(--primary); text-transform: uppercase; font-weight: 700;">Saldo actual</div>
+      <div style="font-size: 32px; font-weight: 900; color: var(--primary); margin-top: 4px;">${USUARIO_ACTUAL.nexo_coins || 0} NXC</div>
+    </div>
+    ${lista}
+  `);
+}
+
+/* ============================================================
+   REFERIDOS
+   ============================================================ */
+
+async function mostrarModalReferidos() {
+  if (!USUARIO_ACTUAL) { mostrarModalLogin(); return; }
+
+  const codigo = USUARIO_ACTUAL.codigo_referido || '—';
+  const enlace = location.origin + location.pathname + '?ref=' + codigo;
+
+  const r = await http(
+    SUPABASE_URL + '/rest/v1/referidos?referidor_id=eq.' + USUARIO_ACTUAL.id +
+    '&select=*&order=creado_en.desc'
+  );
+  const refs = Array.isArray(r.data) ? r.data : [];
+
+  const lista = refs.length === 0
+    ? '<div class="aviso aviso-info">Nadie se ha registrado con tu código todavía.</div>'
+    : refs.map(ref => `
+        <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--bd);">
+          <div>
+            <div style="font-weight: 700;">Invitado</div>
+            <div style="font-size: 12px; color: var(--tx-3);">${tiempoRelativo(ref.creado_en)}</div>
+          </div>
+          <div style="font-weight: 700; color: var(--green);">+${ref.coins_referidor} NXC</div>
+        </div>
+      `).join('');
+
+  const contenido = `
+    <div style="background: var(--primary-soft); padding: 16px; border-radius: var(--r-md); margin-bottom: 16px;">
+      <div style="font-size: 12px; color: var(--primary); text-transform: uppercase; font-weight: 700;">Tu código</div>
+      <div style="font-size: 28px; font-weight: 900; color: var(--primary); margin-top: 4px; letter-spacing: 0.05em;">${escapeHtml(codigo)}</div>
+    </div>
+
+    <div class="campo">
+      <label>Tu enlace de invitación</label>
+      <input type="text" value="${escapeAttr(enlace)}" readonly id="input-referido">
+    </div>
+
+    <button class="btn btn-violeta btn-bloque mb-24" id="btn-copiar-ref">Copiar enlace</button>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;">
+      <div style="background: var(--bg-2); padding: 12px; border-radius: var(--r-md);">
+        <div style="font-size: 11px; color: var(--tx-3); text-transform: uppercase;">Total</div>
+        <div style="font-size: 24px; font-weight: 900;">${refs.length}</div>
+      </div>
+      <div style="background: var(--bg-2); padding: 12px; border-radius: var(--r-md);">
+        <div style="font-size: 11px; color: var(--tx-3); text-transform: uppercase;">Ganado</div>
+        <div style="font-size: 24px; font-weight: 900; color: var(--green);">${refs.length * 50} NXC</div>
+      </div>
+    </div>
+
+    <h3 style="font-size: 16px; margin-bottom: 12px;">Historial</h3>
+    ${lista}
+
+    <div class="aviso aviso-info mt-24" style="font-size: 12px;">
+      Ganas <strong>+50 NXC</strong> por cada persona que se registre con tu código. Tu invitado gana +25.
+    </div>
+  `;
+
+  const { cuerpo } = abrirModal('Mis referidos', contenido);
+  const btn = cuerpo.querySelector('#btn-copiar-ref');
+  if (btn) {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(enlace);
+        toast('Enlace copiado ✓', 'ok');
+      } catch (e) {
+        const input = cuerpo.querySelector('#input-referido');
+        input.select();
+        toast('Copia manualmente (Ctrl+C).', 'aviso');
+      }
+    });
+  }
+}
+
+/* ============================================================
+   PATROCINIO
+   ============================================================ */
+
+function mostrarModalPatrocinio(tipo = 'marca') {
+  if (!USUARIO_ACTUAL) {
+    toast('Inicia sesión para patrocinar.', 'aviso');
+    mostrarModalLogin();
+    return;
+  }
+
+  const cfg = TIPOS_PATROCINIO[tipo] || TIPOS_PATROCINIO.marca;
+  const esGratis = cfg.gratis;
+
+  const contenido = `
+    <p style="font-size: 13px; color: var(--tx-3); margin-bottom: 16px;">
+      ${escapeHtml(cfg.etiqueta)} · <strong>${esGratis ? 'Gratis' : '$' + PRECIO_PATROCINIO_ANUAL.toFixed(2) + '/año'}</strong>
+    </p>
+
+    <div class="aviso aviso-warn" style="font-size: 12px;">
+      <strong>Compromiso:</strong> al patrocinar, te comprometes a representar
+      a Nexo en tus canales (menciones, enlaces, redes).
+    </div>
+
+    <form id="form-patrocinio" autocomplete="off">
+      <div class="campo">
+        <label for="pat-nombre">Nombre público</label>
+        <input type="text" id="pat-nombre" required minlength="3" maxlength="60"
+               placeholder="${esGratis ? 'Ej: Marca X / @influencer / Club Y' : 'Tu alias o marca'}"
+               value="${escapeAttr(USUARIO_ACTUAL.alias || '')}">
+      </div>
+      <div class="campo">
+        <label for="pat-contacto">Email o red social</label>
+        <input type="text" id="pat-contacto" required maxlength="120"
+               placeholder="hola@marca.com o @tu_instagram">
+      </div>
+      ${esGratis ? `
+        <div class="campo">
+          <label for="pat-prueba">Enlace que demuestra que eres marca / influencer / club</label>
+          <input type="url" id="pat-prueba" required inputmode="url"
+                 placeholder="https://... (web, Instagram, YouTube)">
+        </div>
+      ` : `
+        <div class="campo">
+          <label for="pat-web">Web o red (opcional)</label>
+          <input type="url" id="pat-web" inputmode="url" placeholder="https://...">
+        </div>
+        <div class="aviso aviso-info" style="font-size: 12px;">
+          El pago se gestiona por contacto directo tras aprobar (BTC o USDT).
+        </div>
+      `}
+      <div class="campo-checkbox">
+        <input type="checkbox" id="pat-compromiso" required>
+        <label for="pat-compromiso" style="font-weight: 500; cursor: pointer;">
+          Acepto representar a Nexo y cumplir el compromiso de menciones.
+        </label>
+      </div>
+      <button type="submit" class="btn ${esGratis ? 'btn-violeta' : 'btn-lima'} btn-bloque btn-grande mt-16">
+        ${esGratis ? 'Solicitar patrocinio gratis →' : 'Solicitar patrocinio →'}
+      </button>
+    </form>
+  `;
+
+  const { cuerpo, fondo } = abrirModal('Patrocinio', contenido);
+  const form = cuerpo.querySelector('#form-patrocinio');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true; btn.textContent = 'Enviando...';
+
+    const solicitud = {
+      usuario_id: USUARIO_ACTUAL.id,
+      tipo: tipo,
+      nombre_publico: form.querySelector('#pat-nombre').value.trim(),
+      contacto: form.querySelector('#pat-contacto').value.trim(),
+      prueba_url: form.querySelector('#pat-prueba') ? form.querySelector('#pat-prueba').value.trim() : null,
+      web_url: form.querySelector('#pat-web') ? form.querySelector('#pat-web').value.trim() : null,
+      estado: 'pendiente',
+      precio: esGratis ? 0 : PRECIO_PATROCINIO_ANUAL,
+      moneda: 'USD'
+    };
+
+    const r = await http(SUPABASE_URL + '/rest/v1/patrocinios', {
+      method: 'POST',
+      headers: { 'Prefer': 'return=minimal' },
+      body: JSON.stringify(solicitud)
+    });
+
+    if (!r.ok) {
+      toast('No se pudo enviar: ' + (r.error || ''), 'error');
+      btn.disabled = false; btn.textContent = 'Reintentar';
+      return;
+    }
+
+    toast('Solicitud enviada. Te contactamos en 72h.', 'ok');
+    cerrarModal(fondo);
+  });
+}
+
+/* ============================================================
+   PRO (mensual)
+   ============================================================ */
+
+function mostrarModalPro() {
+  if (!USUARIO_ACTUAL) { mostrarModalLogin(); return; }
+
+  const contenido = `
+    <div class="aviso aviso-info" style="font-size: 13px;">
+      Para activar Pro, escríbenos a <strong>nexo@ejemplo.com</strong>
+      indicando tu alias <strong>@${escapeHtml(USUARIO_ACTUAL.alias)}</strong>.
+      Te enviamos dirección de pago en BTC o USDT.
+    </div>
+
+    <ul class="plan-features mt-16">
+      <li>Sin límite de publicaciones</li>
+      <li>Analytics avanzadas de tus ofertas</li>
+      <li>Badge Pro en tu perfil</li>
+      <li>Comisión reducida: 15% en vez de 20%</li>
+      <li>Cancela cuando quieras</li>
+    </ul>
+
+    <div class="aviso aviso-warn mt-24" style="font-size: 12px;">
+      Precio: <strong>$${PRECIO_PRO_MENSUAL}/mes</strong>. Se renueva cada 30 días.
+      Procesamos el pago en 24h.
+    </div>
+  `;
+  abrirModal('Nexo Pro', contenido);
+}
+
+/* ============================================================
+   LEGAL
+   ============================================================ */
+
+function mostrarLegal(cual) {
+  const art = qs('#legal-' + cual);
+  if (!art) { toast('Documento no encontrado.', 'error'); return; }
+  const titulos = {
+    terminos: 'Términos y Condiciones',
+    privacidad: 'Política de Privacidad',
+    cookies: 'Política de Cookies',
+    aviso: 'Aviso Legal',
+    menores: 'Política de Menores',
+    contenido: 'Política de Contenido',
+    comisiones: 'Política de Comisiones',
+    pagos: 'Política de Pagos',
+    conflictos: 'Resolución de Conflictos'
+  };
+  abrirModal(titulos[cual] || 'Documento', art.innerHTML);
+}
+
+/* ============================================================
+   ADMIN (solo tutores)
+   ============================================================ */
+
+function esAdmin() {
+  return USUARIO_ACTUAL && USUARIO_ACTUAL.es_tutor === true;
+}
+
+function mostrarModalAdmin() {
+  if (!esAdmin()) {
+    toast('Solo tutores pueden acceder.', 'error');
+    return;
+  }
+
+  const contenido = `
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px;">
+      <button class="btn btn-violeta" data-admin="ofertas">Ofertas</button>
+      <button class="btn btn-violeta" data-admin="usuarios">Usuarios</button>
+      <button class="btn btn-outline" data-admin="metricas">Métricas</button>
+      <button class="btn btn-outline" data-admin="comisiones">Comisiones</button>
+    </div>
+    <div id="admin-panel"></div>
+  `;
+
+  const { cuerpo } = abrirModal('Panel admin', contenido);
+  const panel = cuerpo.querySelector('#admin-panel');
+  panel.innerHTML = '<div class="aviso aviso-info">Elige una opción arriba.</div>';
+
+  cuerpo.querySelectorAll('[data-admin]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cual = btn.getAttribute('data-admin');
+      if (cual === 'ofertas') adminOfertas(panel);
+      if (cual === 'usuarios') adminUsuarios(panel);
+      if (cual === 'metricas') adminMetricas(panel);
+      if (cual === 'comisiones') adminComisiones(panel);
+    });
+  });
+}
+
+async function adminOfertas(panel) {
+  panel.innerHTML = '<div style="padding:20px; text-align:center; color:var(--tx-3);">Cargando...</div>';
+  const r = await http(SUPABASE_URL + '/rest/v1/ofertas?select=id,titulo,activa,patrocinada&order=creado_en.desc&limit=30');
+  if (!r.ok) { panel.innerHTML = '<div class="aviso aviso-error">Error.</div>'; return; }
+  const ofertas = Array.isArray(r.data) ? r.data : [];
+  if (ofertas.length === 0) { panel.innerHTML = '<div class="aviso aviso-info">Sin ofertas.</div>'; return; }
+
+  panel.innerHTML = '';
+  ofertas.forEach(o => {
+    const card = crearEl('div', { style: 'padding:10px; border:1px solid var(--bd); border-radius:var(--r-sm); margin-bottom:8px;' });
+    card.appendChild(crearEl('div', { texto: o.titulo, style: 'font-weight:700; font-size:14px; margin-bottom:6px;' }));
+    card.appendChild(crearEl('div', { texto: (o.activa ? 'Activa' : 'Pausada') + (o.patrocinada ? ' · Patrocinada' : ''), style: 'font-size:12px; color:var(--tx-3); margin-bottom:8px;' }));
+    const acciones = crearEl('div', { style: 'display:flex; gap:6px;' });
+    const btnP = crearEl('button', { clase: 'btn btn-outline', texto: o.activa ? 'Pausar' : 'Activar', style: 'font-size:12px; padding:6px 12px; min-height:32px;' });
+    btnP.addEventListener('click', async () => {
+      await http(SUPABASE_URL + '/rest/v1/ofertas?id=eq.' + o.id, {
+        method: 'PATCH', headers: { 'Prefer': 'return=minimal' },
+        body: JSON.stringify({ activa: !o.activa })
+      });
+      adminOfertas(panel);
+    });
+    acciones.appendChild(btnP);
+    const btnE = crearEl('button', { clase: 'btn btn-rojo', texto: 'Eliminar', style: 'font-size:12px; padding:6px 12px; min-height:32px;' });
+    btnE.addEventListener('click', async () => {
+      if (!confirm('¿Eliminar esta oferta?')) return;
+      await http(SUPABASE_URL + '/rest/v1/ofertas?id=eq.' + o.id, { method: 'DELETE' });
+      adminOfertas(panel);
+    });
+    acciones.appendChild(btnE);
+    card.appendChild(acciones);
+    panel.appendChild(card);
+  });
+}
+
+async function adminUsuarios(panel) {
+  panel.innerHTML = '<div style="padding:20px; text-align:center; color:var(--tx-3);">Cargando...</div>';
+  const r = await http(SUPABASE_URL + '/rest/v1/perfiles?select=id,alias,nexo_coins,nivel,baneado,es_tutor&order=creado_en.desc&limit=50');
+  if (!r.ok) { panel.innerHTML = '<div class="aviso aviso-error">Error.</div>'; return; }
+  const users = Array.isArray(r.data) ? r.data : [];
+  if (users.length === 0) { panel.innerHTML = '<div class="aviso aviso-info">Sin usuarios.</div>'; return; }
+
+  panel.innerHTML = '';
+  users.forEach(u => {
+    const card = crearEl('div', { style: 'padding:10px; border:1px solid var(--bd); border-radius:var(--r-sm); margin-bottom:8px;' });
+    card.appendChild(crearEl('div', { texto: '@' + u.alias, style: 'font-weight:700; font-size:14px;' }));
+    card.appendChild(crearEl('div', { texto: (u.nexo_coins || 0) + ' NXC · Nivel ' + (u.nivel || 1), style: 'font-size:12px; color:var(--tx-3); margin:4px 0 8px;' }));
+    const acciones = crearEl('div', { style: 'display:flex; gap:6px; flex-wrap:wrap;' });
+    const btnB = crearEl('button', {
+      clase: u.baneado ? 'btn btn-outline' : 'btn btn-rojo',
+      texto: u.baneado ? 'Reactivar' : 'Banear',
+      style: 'font-size:12px; padding:6px 12px; min-height:32px;'
+    });
+    btnB.addEventListener('click', async () => {
+      await http(SUPABASE_URL + '/rest/v1/perfiles?id=eq.' + u.id, {
+        method: 'PATCH', headers: { 'Prefer': 'return=minimal' },
+        body: JSON.stringify({ baneado: !u.baneado })
+      });
+      adminUsuarios(panel);
+    });
+    acciones.appendChild(btnB);
+    card.appendChild(acciones);
+    panel.appendChild(card);
+  });
+}
+
+async function adminMetricas(panel) {
+  panel.innerHTML = '<div style="padding:20px; text-align:center; color:var(--tx-3);">Calculando...</div>';
+  const [rO, rU, rV] = await Promise.all([
+    http(SUPABASE_URL + '/rest/v1/ofertas?select=id'),
+    http(SUPABASE_URL + '/rest/v1/perfiles?select=id'),
+    http(SUPABASE_URL + '/rest/v1/ventas?select=monto_total')
+  ]);
+  const totalOfertas = (rO.data && rO.data.length) || 0;
+  const totalUsuarios = (rU.data && rU.data.length) || 0;
+  const ventas = Array.isArray(rV.data) ? rV.data : [];
+  const montoTotal = ventas.reduce((s, v) => s + parseFloat(v.monto_total || 0), 0);
+
+  panel.innerHTML = `
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="padding:14px; background:var(--bg-2); border-radius:var(--r-md);">
+        <div style="font-size:11px; color:var(--tx-3); text-transform:uppercase;">Ofertas</div>
+        <div style="font-size:24px; font-weight:900;">${totalOfertas}</div>
+      </div>
+      <div style="padding:14px; background:var(--bg-2); border-radius:var(--r-md);">
+        <div style="font-size:11px; color:var(--tx-3); text-transform:uppercase;">Usuarios</div>
+        <div style="font-size:24px; font-weight:900;">${totalUsuarios}</div>
+      </div>
+      <div style="padding:14px; background:var(--bg-2); border-radius:var(--r-md);">
+        <div style="font-size:11px; color:var(--tx-3); text-transform:uppercase;">Ventas</div>
+        <div style="font-size:24px; font-weight:900;">${ventas.length}</div>
+      </div>
+      <div style="padding:14px; background:var(--bg-2); border-radius:var(--r-md);">
+        <div style="font-size:11px; color:var(--tx-3); text-transform:uppercase;">Volumen</div>
+        <div style="font-size:24px; font-weight:900; color:var(--green);">$${montoTotal.toFixed(0)}</div>
+      </div>
+    </div>
+  `;
+}
+
+async function adminComisiones(panel) {
+  panel.innerHTML = '<div style="padding:20px; text-align:center; color:var(--tx-3);">Cargando...</div>';
+  const r = await http(SUPABASE_URL + '/rest/v1/comisiones?select=*,perfiles(alias)&order=creado_en.desc&limit=30');
+  if (!r.ok) { panel.innerHTML = '<div class="aviso aviso-error">Error.</div>'; return; }
+  const coms = Array.isArray(r.data) ? r.data : [];
+  if (coms.length === 0) { panel.innerHTML = '<div class="aviso aviso-info">Sin comisiones.</div>'; return; }
+
+  panel.innerHTML = '';
+  coms.forEach(c => {
+    const card = crearEl('div', { style: 'padding:10px; border:1px solid var(--bd); border-radius:var(--r-sm); margin-bottom:8px;' });
+    card.appendChild(crearEl('div', { texto: '@' + ((c.perfiles && c.perfiles.alias) || 'usuario'), style: 'font-weight:700; font-size:13px;' }));
+    card.appendChild(crearEl('div', { texto: 'Usuario: $' + parseFloat(c.monto_usuario || 0).toFixed(2) + ' · Nexo: $' + parseFloat(c.monto_nexo || 0).toFixed(2), style: 'font-size:12px; color:var(--tx-3); margin:2px 0;' }));
+    card.appendChild(crearEl('div', { texto: c.estado, style: 'font-size:11px; color:var(--tx-3); text-transform:uppercase;' }));
+    panel.appendChild(card);
+  });
+}
+
+/* ============================================================
+   UI HEADER (según sesión)
+   ============================================================ */
+
+function actualizarUIHeader() {
+  const btnAuth = qs('#header-auth');
+  const btnPerfil = qs('#header-perfil');
+  if (!btnAuth || !btnPerfil) return;
+
+  if (USUARIO_ACTUAL) {
+    btnAuth.classList.add('oculto');
+    btnPerfil.classList.remove('oculto');
+    btnPerfil.textContent = '@' + USUARIO_ACTUAL.alias;
+  } else {
+    btnAuth.classList.remove('oculto');
+    btnPerfil.classList.add('oculto');
+  }
+  actualizarContadorCarrito();
+}
+
+/* ============================================================
+   NAVEGACIÓN
+   ============================================================ */
+
+function irA(id) {
+  const el = qs('#' + id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+/* ============================================================
+   DELEGACIÓN DE EVENTOS
+   ============================================================ */
+
+function conectarAcciones() {
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest('[data-accion]');
+    if (!el) return;
+    e.preventDefault();
+    const accion = el.getAttribute('data-accion');
+
+    switch (accion) {
+      case 'abrir-registro': mostrarModalRegistro(); break;
+      case 'abrir-login': mostrarModalLogin(); break;
+      case 'abrir-perfil': mostrarModalPerfil(); break;
+      case 'abrir-publicar': mostrarModalPublicar(); break;
+      case 'abrir-carrito': mostrarModalCarrito(); break;
+      case 'abrir-cartera': mostrarModalCartera(); break;
+      case 'abrir-retiros': mostrarModalRetiros(); break;
+      case 'abrir-movimientos': mostrarModalMovimientos(); break;
+      case 'abrir-referidos': mostrarModalReferidos(); break;
+      case 'abrir-patrocinio': {
+        const tipo = el.getAttribute('data-tipo') || 'marca';
+        mostrarModalPatrocinio(tipo);
+        break;
+      }
+      case 'abrir-pro': mostrarModalPro(); break;
+      case 'abrir-admin': mostrarModalAdmin(); break;
+      case 'abrir-legal': {
+        const cual = el.getAttribute('data-legal');
+        mostrarLegal(cual);
+        break;
+      }
+      case 'logout': logout(); break;
+      case 'ir-inicio':
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        break;
+      case 'ir-explorar': irA('explorar'); break;
+      case 'ir-leaderboard': irA('leaderboard'); break;
+      case 'ir-como': irA('como'); break;
+      case 'ir-patrocinio': irA('patrocinio'); break;
+      case 'ir-api': irA('api'); break;
+    }
+  });
+}
+
+/* ============================================================
+   FILTROS
+   ============================================================ */
+
+function conectarFiltros() {
+  const selCat = qs('#filtro-categoria');
+  const selTie = qs('#filtro-tienda');
+  const selOrd = qs('#filtro-orden');
+  const inputBuscar = qs('#filtro-buscar');
+
+  if (selCat) selCat.addEventListener('change', () => cargarOfertas({ categoria: selCat.value }));
+  if (selTie) selTie.addEventListener('change', () => cargarOfertas({ tienda: selTie.value }));
+  if (selOrd) selOrd.addEventListener('change', () => cargarOfertas({ orden: selOrd.value }));
+  if (inputBuscar) {
+    const debounced = debounce(() => cargarOfertas({ buscar: inputBuscar.value }), 400);
+    inputBuscar.addEventListener('input', debounced);
+  }
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+
+async function init() {
+  try {
+    detectarReferidoURL();
+    conectarAcciones();
+    conectarFiltros();
+
+    // Botón buscar del header (enfoca el buscador)
+    const btnBuscar = qs('#header-buscar');
+    if (btnBuscar) {
+      btnBuscar.addEventListener('click', () => {
+        irA('explorar');
+        setTimeout(() => {
+          const inp = qs('#filtro-buscar');
+          if (inp) inp.focus();
+        }, 400);
+      });
+    }
+
+    // Cargar catálogos primero (para filtros y publicar)
+    await cargarCatalogos();
+
+    // Restaurar sesión
+    await cargarPerfil();
+
+    // Cargar carrito si hay sesión
+    if (USUARIO_ACTUAL) await cargarCarrito();
+
+    // Pintar UI
+    actualizarUIHeader();
+
+    // Cargar datos en paralelo
+    await Promise.all([
+      cargarOfertas(),
+      cargarLeaderboard(),
+      cargarStats()
+    ]);
+
+  } catch (err) {
+    console.error('[NEXO] Error en init:', err);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+
+</body>
+</html>
+</script>
